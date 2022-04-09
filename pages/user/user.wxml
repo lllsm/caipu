@@ -1,0 +1,94 @@
+<view class="user-info">
+    <navigator navigateBack class="user-details" hoverClass="none" url="userinfo/userinfo?user_id={{user_id}}" wx:if="{{login_status}}">
+        <image class="user-avatar" mode="aspectFill" src="{{user_avatar}}"></image>
+        <view class="user-name">
+            <block wx:if="{{intro!=''}}">
+                <view class="name">{{nick_name}}</view>
+                <view class="intro">{{intro}}</view>
+            </block>
+            <view class="name name-only" wx:else>{{nick_name}}</view>
+        </view>
+    </navigator>
+    <view bindtap="loginBut" class="login-but" wx:else>
+        <image class="user-avatar" mode="aspectFill" src="/images/common/default_user_avatar.png"></image>
+        <view class="user-name">
+            <view class="name-only">未登录, 点击后登录</view>
+        </view>
+    </view>
+    <view bindtap="quitLogin" class="quit-login" wx:if="{{login_status}}">
+        <view class="quit-title">退出</view>
+    </view>
+    <view bindtap="quitLogin" class="quit-login quit-ligin-hide" wx:else></view>
+</view>
+<view class="list-head">
+    <block wx:for="{{pages}}" wx:key="index">
+        <view bindtap="pageData" class="pages-title-select" id="{{item.Id}}" wx:if="{{item.Id==pages_but}}">{{item.Name}}</view>
+        <view bindtap="pageData" class="pages-title" id="{{item.Id}}" wx:else>{{item.Name}}</view>
+    </block>
+</view>
+<view class="list" style="height: {{list_height}}rpx" wx:if="{{request_status}}">
+    <scroll-view bind:scrolltolower="getListData" class="list-scroll" scrollY="true" style="height: {{list_height}}rpx">
+        <view class="list-scroll-segment">
+            <block wx:if="{{pages_but=='myFavorite'}}">
+                <block wx:if="{{recipe_list.myFavorite.length>0}}">
+                    <block wx:for="{{recipe_list.myFavorite}}" wx:key="index">
+                        <navigator navigateBack class="list-recipe-left" hoverClass="none" url="/pages/recipe/recipe?id={{item.RecipeId}}&type={{item.Type}}" wx:if="{{index%2==0}}">
+                            <blocl wx:if="{{item.Type==0}}">
+                                <image class="recipe-cover" lazyLoad="true" mode="aspectFill" src="{{item.Cover}}"></image>
+                            </blocl>
+                            <block wx:else>
+                                <image class="recipe-cover" lazyLoad="true" mode="aspectFill" src="{{item.Cover}}"></image>
+                                <image class="recipe-list-play" src="/images/common/video-play.png"></image>
+                            </block>
+                            <view class="recipe-title">{{item.BaiduTitle}}</view>
+                        </navigator>
+                        <navigator navigateBack class="list-recipe-left list-recipe-right" hoverClass="none" url="/pages/recipe/recipe?id={{item.RecipeId}}&type={{item.Type}}" wx:else>
+                            <blocl wx:if="{{item.Type==0}}">
+                                <image class="recipe-cover" lazyLoad="true" mode="aspectFill" src="{{item.Cover}}"></image>
+                            </blocl>
+                            <block wx:else>
+                                <image class="recipe-cover" lazyLoad="true" mode="aspectFill" src="{{item.Cover}}"></image>
+                                <image class="recipe-list-play" src="/images/common/video-play.png"></image>
+                            </block>
+                            <view class="recipe-title">{{item.BaiduTitle}}</view>
+                        </navigator>
+                    </block>
+                </block>
+                <block wx:else>
+                    <image class="null-img" mode="aspectFill" src="/images/common/null_favorite.png"></image>
+                    <view class="null-title" wx:if="{{login_status}}">暂无收藏的菜谱</view>
+                    <blick wx:else>
+                        <view class="null-title">登录后查看我收藏的菜谱</view>
+                    </blick>
+                </block>
+            </block>
+            <block wx:else>
+                <block wx:if="{{recipe_list.myRecipe.length>0}}">
+                    <blick wx:for="{{recipe_list.myRecipe}}" wx:key="index">
+                        <navigator navigateBack class="my-recipe" hoverClass="none" url="/pages/recipe/recipe?id={{item.RecipeId}}&type={{item.Type}}">
+                            <image class="my-recipe-cover" lazyLoad="true" mode="aspectFill" src="{{item.Cover}}" wx:if="{{item.Type==0}}"></image>
+                            <blick wx:else>
+                                <image class="my-recipe-cover" lazyLoad="true" mode="aspectFill" src="{{item.Cover}}"></image>
+                                <image class="recipe-list-play-my" mode="aspectFill" src="/images/common/video-play.png"></image>
+                            </blick>
+                            <view class="recipe-info">
+                                <view class="my-recipe-title">{{item.BaiduTitle}}</view>
+                                <view class="my-recipe-info">
+                                    <view class="view-count">{{item.ViewCount}} 热度</view>
+                                    <view class="like-count">{{item.LikeCount}} 收藏</view>
+                                </view>
+                                <view class="my-recipe-time">{{item.UpdateTime}}</view>
+                            </view>
+                        </navigator>
+                    </blick>
+                </block>
+                <block wx:else>
+                    <image class="null-img" mode="aspectFill" src="/images/common/null_data.png"></image>
+                    <view class="null-title" wx:if="{{login_status}}">暂无发布的菜谱</view>
+                    <view class="null-title" wx:else>登录后查看我发布的菜谱</view>
+                </block>
+            </block>
+        </view>
+    </scroll-view>
+</view>
+<view class="login-failure" wx:else>登录失败,稍后重试</view>

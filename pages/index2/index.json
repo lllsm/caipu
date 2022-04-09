@@ -1,0 +1,8 @@
+{
+    "navigationBarBackgroundColor": "#FFFFFF",
+    "navigationBarTextStyle": "black",
+    "navigationStyle": "default",
+    "backgroundTextStyle": "light",
+    "navigationBarTitleText": "荷包蛋菜谱",
+    "usingComponents": {}
+}

@@ -1,0 +1,35 @@
+<block wx:if="{{request_status}}">
+    <view class="head">
+        <view class="head-title" wx:if="{{cate_name!=''}}">{{cate_name}}</view>
+        <view class="head-title" wx:else>{{keywords}}</view>
+        <view class="sort-mode">
+            <block wx:for="{{sort_cate}}" wx:key="index">
+                <view bindtap="sortBut" class="sort-select" id="{{item.Id}}" wx:if="{{sort_id==item.Id}}">{{item.Name}}</view>
+                <view bindtap="sortBut" class="sort-default" id="{{item.Id}}" wx:else>{{item.Name}}</view>
+            </block>
+        </view>
+    </view>
+    <view class="page">
+        <block wx:if="{{null_data}}">
+            <import src="../../template/template.wxml"></import>
+            <view class="list">
+                <view class="recipe-list">
+                    <block wx:if="{{sort_id=='sortDefault'}}">
+                        <template is="recipe-list" data="{{...item,index:index}}" wx:for="{{recipe_list.sortDefault}}" wx:key="index"></template>
+                    </block>
+                    <block wx:else>
+                        <template is="recipe-list" data="{{...item,index:index}}" wx:for="{{recipe_list.sortSelect}}" wx:key="index"></template>
+                    </block>
+                </view>
+            </view>
+        </block>
+        <view class="null-data" wx:else>
+            <image class="null-data-img" mode="aspectFill" src="/images/common/null_data.png"></image>
+            <view class="null-data-title">暂无数据</view>
+        </view>
+    </view>
+</block>
+<view class="null-data" wx:else>
+    <image class="null-data-img" mode="aspectFill" src="/images/common/null_data.png"></image>
+    <view class="null-data-title">暂无数据</view>
+</view>

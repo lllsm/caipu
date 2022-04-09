@@ -1,0 +1,259 @@
+.user-info {
+    padding: 61rpx 50rpx 60rpx 50rpx;
+    display: flex;
+    border-bottom: 10rpx solid #EEEEEE;
+    position: fixed;
+    background: #FFFFFF;
+    top: 0rpx;
+    z-index: 2;
+}
+
+.user-details {
+    width: 510rpx;
+    display: flex;
+}
+
+.login-but {
+    display: flex;
+}
+
+.user-avatar {
+    width: 146rpx;
+    height: 146rpx;
+    background: #D8D8D8;
+    border-radius: 150rpx;
+}
+
+.user-name {
+    width: 321rpx;
+    padding-left: 42rpx;
+}
+
+.name {
+    width: 300rpx;
+    font-size: 30rpx;
+    font-weight: 500;
+    color: #111111;
+    line-height: 42rpx;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding: 12rpx 0;
+}
+
+.name-only {
+    padding: 50rpx 0;
+}
+
+.intro {
+    width: 300rpx;
+    font-size: 26rpx;
+    font-weight: 400;
+    color: #666666;
+    line-height: 37rpx;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding-top: 20rpx;
+}
+
+.quit-login {
+    width: 145rpx;
+    height: 80rpx;
+    border-radius: 50rpx;
+    border: 1px solid #999999;
+    text-align: center;
+    margin: 33rpx 0;
+}
+
+.quit-ligin-hide {
+    visibility: hidden;
+}
+
+.quit-title {
+    font-size: 30rpx;
+    font-weight: 400;
+    color: #000000;
+    line-height: 42rpx;
+    padding: 19rpx 0;
+}
+
+.list-head {
+    width: 750rpx;
+    display: flex;
+    padding: 44rpx 0 15rpx 0;
+    background: #FFFFFF;
+    position: fixed;
+    top: 279rpx;
+    z-index: 2;
+}
+
+.pages-title-select {
+    font-size: 48rpx;
+    font-weight: 500;
+    color: #000000;
+    line-height: 67rpx;
+    padding: 0 0 0 48rpx;
+}
+
+.pages-title {
+    font-size: 30rpx;
+    font-weight: 400;
+    color: #000000;
+    line-height: 42rpx;
+    padding: 19rpx 0 0 50rpx;
+}
+
+.list {
+    padding-top: 403rpx;
+}
+
+.list-scroll {
+    height: 676rpx;
+}
+
+.list-scroll-segment {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 50rpx;
+}
+
+.list-recipe-left {
+    width: 310rpx;
+    height: 382rpx;
+    padding: 20rpx 29rpx 75rpx 0;
+    border-radius: 20rpx;
+}
+
+.list-recipe-right {
+    padding: 20rpx 0 75rpx 0;
+}
+
+.recipe-cover {
+    width: 310rpx;
+    height: 310rpx;
+    background: #D8D8D8;
+    border-radius: 20rpx;
+}
+
+.recipe-list-play {
+    width: 36rpx;
+    height: 36rpx;
+    position: absolute;
+    display: flex;
+    margin: -300rpx 260rpx;
+    align-items: center;
+}
+
+.recipe-title {
+    font-size: 30rpx;
+    font-weight: 500;
+    color: #000000;
+    line-height: 42rpx;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    padding-top: 30rpx;
+}
+
+.related-recipe {
+    height: auto;
+    padding-top: 45rpx;
+}
+
+.related-recipe-title {
+    font-size: 48rpx;
+    font-weight: 500;
+    color: #000000;
+    line-height: 67rpx;
+}
+
+.related-recipe-list {
+    height: auto;
+    padding-top: 54rpx;
+}
+
+.my-recipe {
+    display: flex;
+    padding: 20rpx 0 56rpx 0;
+}
+
+.my-recipe-cover {
+    width: 309rpx;
+    height: 197rpx;
+    border-radius: 10rpx;
+}
+
+.recipe-list-play-my {
+    width: 36rpx;
+    height: 36rpx;
+    position: absolute;
+    display: flex;
+    margin: -190rpx 260rpx;
+    align-items: center;
+}
+
+.recipe-info {
+    height: auto;
+    padding-left: 39rpx;
+}
+
+.my-recipe-title {
+    width: 324rpx;
+    height: 100rpx;
+    font-size: 34rpx;
+    font-weight: 400;
+    color: #000000;
+    line-height: 48rpx;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+.my-recipe-info {
+    display: flex;
+    padding-top: 25rpx;
+}
+
+.view-count {
+    font-size: 26rpx;
+    font-weight: 400;
+    color: #999999;
+    line-height: 37rpx;
+}
+
+.like-count {
+    font-size: 26rpx;
+    font-weight: 400;
+    color: #999999;
+    line-height: 37rpx;
+    padding-left: 35rpx;
+}
+
+.my-recipe-time {
+    font-size: 26rpx;
+    font-weight: 400;
+    color: #999999;
+    line-height: 37rpx;
+    padding-top: 10rpx;
+}
+
+.null-img {
+    width: 180rpx;
+    height: 180rpx;
+    padding: 203rpx 235rpx 0 235rpx;
+}
+
+.null-title {
+    width: 350rpx;
+    text-align: center;
+    font-size: 30rpx;
+    font-weight: 400;
+    color: #999999;
+    line-height: 42rpx;
+    padding: 45rpx 150rpx 0 150rpx;
+}
+
+.login-failure {
+    padding: 667rpx 100rpx 0 100rpx;
+    text-align: center;
+}

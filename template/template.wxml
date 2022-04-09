@@ -1,0 +1,69 @@
+<template name="list-ad">
+    <view style="{{Style}}">
+        <!-- <ad unitId="{{UnitId}}"></ad> -->
+    </view>
+</template>
+<template name="comment-list">
+    <view class="comment-list">
+        <view class="comment-user-info">
+            <view class="comment-user">
+                <image class="comment-user-avatar" lazyLoad="true" mode="aspectFill" src="{{UserAvatar}}"></image>
+                <view class="comment-user-name">{{UserName}}</view>
+            </view>
+            <view bindtap="commee_digg_add" class="comment-digg" data-id="{{CommentId}}" data-type="{{DiggStatus}}">
+                <block wx:if="{{DiggStatus}}">
+                    <image class="comment-digg-img" mode="aspectFill" src="/images/common/digg_select.png"></image>
+                    <view class="comment-digg-num comment-digg-select">{{DiggNum}}</view>
+                </block>
+                <block wx:else>
+                    <image class="comment-digg-img" mode="aspectFill" src="/images/common/digg.png"></image>
+                    <blocl wx:if="{{DiggNum>0}}">
+                        <view class="comment-digg-num">{{DiggNum}}</view>
+                    </blocl>
+                    <view class="ccomment-digg-null" wx:else></view>
+                </block>
+            </view>
+        </view>
+        <view class="clearfix"></view>
+        <view class="comment-content">{{Content}}</view>
+        <view class="comment-time">{{UpdateTime}}</view>
+    </view>
+</template>
+<template name="recipe-list">
+    <block wx:if="{{index>0}}">
+        <navigator navigateBack class="related-recipe-view-padd" hoverClass="none" url="/pages/recipe/recipe?id={{RecipeId}}&type={{Type}}" wx:if="{{!ModuleAd}}">
+            <view class="list-left">
+                <block wx:if="{{Type>0}}">
+                    <image class="related-recipe-cover" lazyLoad="true" mode="aspectFill" src="{{Cover}}"></image>
+                    <image class="recipe-list-play" mode="aspectFill" src="../../images/common/video-play.png"></image>
+                </block>
+                <image class="related-recipe-cover" lazyLoad="true" mode="aspectFill" src="{{Cover}}" wx:else></image>
+            </view>
+            <view class="list-right">
+                <view class="recipe-title">{{BaiduTitle}}</view>
+                <view class="recipe-user-name">{{UserName}}</view>
+                <view class="related-recipe-counts">
+                    <view class="related-recipe-viewcount">{{ViewCount}} 热度</view>
+                    <view class="related-recipe-likecount">{{LikeCount}} 收藏</view>
+                </view>
+            </view>
+        </navigator>
+    </block>
+    <navigator navigateBack class="related-recipe-view" hoverClass="none" url="/pages/recipe/recipe?id={{RecipeId}}&type={{Type}}" wx:else>
+        <view class="list-left">
+            <block wx:if="{{Type>0}}">
+                <image class="related-recipe-cover" lazyLoad="true" mode="aspectFill" src="{{Cover}}"></image>
+                <image class="recipe-list-play" src="../../images/common/video-play.png"></image>
+            </block>
+            <image class="related-recipe-cover" lazyLoad="true" mode="aspectFill" src="{{Cover}}" wx:else></image>
+        </view>
+        <view class="list-right">
+            <view class="recipe-title">{{BaiduTitle}}</view>
+            <view class="recipe-user-name">{{UserName}}</view>
+            <view class="related-recipe-counts">
+                <view class="related-recipe-viewcount">{{ViewCount}} 热度</view>
+                <view class="related-recipe-likecount">{{LikeCount}} 收藏</view>
+            </view>
+        </view>
+    </navigator>
+</template>

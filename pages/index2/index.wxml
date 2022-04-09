@@ -1,0 +1,134 @@
+<view class="weap">
+    <view class="search">
+        <view class="search-bottom">
+            <input bindblur="search_blur" bindconfirm="search_data" bindfocus="search" bindinput="search_monitor" class="search-input" confirmType="search" placeholder="搜索菜谱、食材" placeholderClass="{{placeholder_type}}" type="text"></input>
+        </view>
+    </view>
+    <view class="banner">
+        <swiper autoplay="true" bindchange="scrollBanner" circular="true" class="banner-module" duration="500" interval="3000" nextMargin="36rpx" previousMargin="36rpx">
+            <swiper-item class="banner-content" wx:for="{{banner_list}}" wx:key="index">
+                <navigator navigateBack hoverClass="none" url="../recipe/recipe?id={{item.RecipeId}}&type={{item.Type}}">
+                    <block wx:if="{{item.Type>0}}">
+                        <image class="banner-img" mode="aspectFill" src="{{item.Cover}}"></image>
+                        <image class="play-button-img" mode="aspectFill" src="../../images/common/video-play.png"></image>
+                    </block>
+                    <image class="banner-img" mode="aspectFill" src="{{item.Cover}}" wx:else></image>
+                </navigator>
+            </swiper-item>
+        </swiper>
+        <navigator navigateBack class="banner-title" hoverClass="none" url="../recipe/recipe?id={{scroll_id}}">
+            <view class="banner-tage">每日精选</view>
+            <view class="title-banner">{{scroll_title}}</view>
+        </navigator>
+    </view>
+    <view class="index-cate">
+        <block wx:for="{{cate}}" wx:key="index">
+            <view bindtap="moreList" class="cate-view" wx:if="{{item.Id=='more'}}">
+                <image class="cate-img" mode="aspectFill" src="../../images/index_cate/{{item.Id}}.png"></image>
+                <view class="cate-name">{{item.Name}}</view>
+            </view>
+            <navigator navigateBack class="cate-view" hoverClass="none" url="../cate/cate?cate_id={{item.Id}}&name={{item.Name}}" wx:else>
+                <image class="cate-img" mode="aspectFill" src="../../images/index_cate/{{item.Id}}.png"></image>
+                <view class="cate-name">{{item.Name}}</view>
+            </navigator>
+        </block>
+    </view>
+    <view class="index-rank" wx:if="{{rank_list!=''}}">
+        <view class="rank-head">
+            <view class="head-title">菜谱排行榜</view>
+            <navigator navigateBack hoverClass="none" url="../cate/ranklist/ranklist">
+                <view class="rank-more">更多
+                      <image class="more-img" mode="aspectFill" src="../../images/common/more.png"></image>
+                </view>
+            </navigator>
+        </view>
+        <view class="rank-list">
+            <scroll-view scrollX class="rank-scroll">
+                <block wx:for="{{rank_list}}" wx:key="index">
+                    <navigator navigateBack class="set-rank" hoverClass="none" url="../recipe/recipe?id={{item.RecipeId}}&type={{item.Type}}" wx:if="{{index==0}}">
+                        <block wx:if="{{item.Type>0}}">
+                            <image class="rank-cover" mode="aspectFill" src="{{item.Cover}}"></image>
+                            <image class="play-button-img-rank" mode="aspectFill" src="../../images/common/video-play.png"></image>
+                        </block>
+                        <image class="rank-cover" mode="aspectFill" src="{{item.Cover}}" wx:else></image>
+                        <view class="rank-title">{{index+1}}. {{item.BaiduTitle}}</view>
+                    </navigator>
+                    <navigator navigateBack class="end-rank" hoverClass="none" url="../recipe/recipe?id={{item.RecipeId}}&type={{item.Type}}" wx:elif="{{index+1==rank_count}}">
+                        <block wx:if="{{item.Type>0}}">
+                            <image class="rank-cover" lazyLoad="true" mode="aspectFill" src="{{item.Cover}}"></image>
+                            <image class="play-button-img-rank" mode="aspectFill" src="../../images/common/video-play.png"></image>
+                        </block>
+                        <image class="rank-cover" lazyLoad="true" mode="aspectFill" src="{{item.Cover}}" wx:else></image>
+                        <view class="rank-title">{{index+1}}. {{item.BaiduTitle}}</view>
+                    </navigator>
+                    <navigator navigateBack class="rank-content" hoverClass="none" url="../recipe/recipe?id={{item.RecipeId}}&type={{item.Type}}" wx:else>
+                        <block wx:if="{{item.Type>0}}">
+                            <image class="rank-cover" lazyLoad="true" mode="aspectFill" src="{{item.Cover}}"></image>
+                            <image class="play-button-img-rank" mode="aspectFill" src="../../images/common/video-play.png"></image>
+                        </block>
+                        <image class="rank-cover" lazyLoad="true" mode="aspectFill" src="{{item.Cover}}" wx:else></image>
+                        <view class="rank-title">{{index+1}}. {{item.BaiduTitle}}</view>
+                    </navigator>
+                </block>
+            </scroll-view>
+        </view>
+    </view>
+    <view class="index-rank" wx:if="{{video_list!=''}}">
+        <!-- <view class="rank-head">
+            <view class="head-title">视频菜谱</view>
+            <navigator navigateBack hoverClass="none" url="../cate/cate?cate_id=isVideo&name=视频菜谱">
+                <view class="rank-more">更多
+                      <image class="more-img" lazyLoad="true" mode="aspectFill" src="../../images/common/more.png"></image>
+                </view>
+            </navigator>
+        </view> -->
+        <!-- <view class="rank-list">
+            <scroll-view scrollX class="rank-scroll">
+                <block wx:for="{{video_list}}" wx:key="index">
+                    <navigator navigateBack class="set-rank" hoverClass="none" url="../recipe/recipe?id={{item.RecipeId}}&type={{item.Type}}" wx:if="{{index==0}}">
+                        <block wx:if="{{item.Type>0}}">
+                            <image class="rank-cover" lazyLoad="true" mode="aspectFill" src="{{item.Cover}}"></image>
+                            <image class="play-button-img-rank" mode="aspectFill" src="../../images/common/video-play.png"></image>
+                        </block>
+                        <image class="rank-cover" lazyLoad="true" mode="aspectFill" src="{{item.Cover}}" wx:else></image>
+                        <view class="rank-title">{{index+1}}. {{item.BaiduTitle}}</view>
+                    </navigator>
+                    <navigator navigateBack class="end-rank" hoverClass="none" url="../recipe/recipe?id={{item.RecipeId}}&type={{item.Type}}" wx:elif="{{index+1==video_count}}">
+                        <block wx:if="{{item.Type>0}}">
+                            <image class="rank-cover" lazyLoad="true" mode="aspectFill" src="{{item.Cover}}"></image>
+                            <image class="play-button-img-rank" mode="aspectFill" src="../../images/common/video-play.png"></image>
+                        </block>
+                        <image class="rank-cover" lazyLoad="true" mode="aspectFill" src="{{item.Cover}}" wx:else></image>
+                        <view class="rank-title">{{index+1}}. {{item.BaiduTitle}}</view>
+                    </navigator>
+                    <navigator navigateBack class="rank-content" hoverClass="none" url="../recipe/recipe?id={{item.RecipeId}}&type={{item.Type}}" wx:else>
+                        <block wx:if="{{item.Type>0}}">
+                            <image class="rank-cover" lazyLoad="true" mode="aspectFill" src="{{item.Cover}}"></image>
+                            <image class="play-button-img-rank" mode="aspectFill" src="../../images/common/video-play.png"></image>
+                        </block>
+                        <image class="rank-cover" lazyLoad="true" mode="aspectFill" src="{{item.Cover}}" wx:else></image>
+                        <view class="rank-title">{{index+1}}. {{item.BaiduTitle}}</view>
+                    </navigator>
+                </block>
+            </scroll-view>
+        </view> -->
+    </view>
+    <view class="index-list">
+        <view class="list-title">每日推荐</view>
+        <navigator navigateBack class="recipe-list" hoverClass="none" url="../recipe/recipe?id={{item.RecipeId}}&type={{item.Type}}" wx:for="{{recipe_list}}" wx:key="index">
+            
+            <view class="recipe-content">
+                <view class="recipe-title">{{item.BaiduTitle}}</view>
+                <block wx:if="{{item.Type>0}}">
+                    <image class="recipe-cover" lazyLoad="true" mode="aspectFill" src="{{item.Cover}}"></image>
+                    <image class="play-button-img" mode="aspectFill" src="../../images/common/video-play.png"></image>
+                </block>
+                <image class="recipe-cover" lazyLoad="true" mode="aspectFill" src="{{item.Cover}}" wx:else></image>
+            </view>
+            <view class="recipe-count">
+                <view class="recipe-view-count">{{item.ViewCount}} 热度</view>
+                <view class="recipe-like-count">{{item.LikeCount}} 收藏</view>
+            </view>
+        </navigator>
+    </view>
+</view>

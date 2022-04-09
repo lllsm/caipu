@@ -1,0 +1,92 @@
+<!-- index.wxml -->
+<view class="container">
+  <view class="base-bbt" style="padding-top:{{global_top}}">
+    <view class="tab-top {{act==0?'act':''}}" bindtap="goact0">
+      <view class="hb">
+        <image class="im" src="../../imgs/wm.png" />
+      </view>
+      <text class="t">点个外卖</text>
+    </view>
+    <view class="tab-top {{act==1?'act':''}}" bindtap="goact1">
+      <view class="hb">
+        <image class="im" src="../../imgs/sx.png" />
+      </view>
+      <text class="t">买点生鲜（福利）</text>
+    </view>
+  </view>
+  <view class="box-bb">
+    <scroll-view class="innerbox-o" scroll-y="{{true}}">
+      <block wx:if="{{act==0}}">
+        <!--  -->
+        <view class="title">—— 点外卖之前先领券 ——</view>
+        <view class="hb-flex">
+
+          <view class="hb" bindtap="wm2">
+            <image  style="animation-duration: 1200ms;" src="../../imgs/mt.png" class="hb-icon animated {{animated2}}  infinite" />
+            <text class="hb-t">美团大红包</text>
+          </view>
+          <view class="hb" bindtap="wm6">
+            <image  style="animation-duration: 1200ms;" src="../../imgs/mt.png" class="hb-icon animated {{animated2}}  infinite" />
+            <text class="hb-t">美团品质外卖</text> 
+        </view>
+        <view class="hb" bindtap="wm3">
+            <image src="../../imgs/mt.png" class="hb-icon" />
+            <text class="hb-t">美团闪购卷</text>
+            
+          </view>
+        </view>
+        <view class="hb-flex flex2">
+          <view class="hb" bindtap="wm7">
+            <image  style="animation-duration: 1200ms;" src="../../imgs/mt.png" class="hb-icon animated {{animated2}}  infinite" />
+            <text class="hb-t">美团周末特价活动</text> 
+        </view>
+          <view class="hb" bindtap="wm1">
+            <image style="animation-duration: 1200ms;" src="../../imgs/ele.png" class="hb-icon animated {{animated1}}  infinite" />
+            <text class="hb-t">饿了么红包</text>
+          </view>
+          <view class="hb" bindtap="wm4">
+            <image src="../../imgs/ele.png" class="hb-icon" />
+            <text class="hb-t">饿了么新人必领红包</text>
+          </view>
+        </view>
+        <view class="title">—— 来个外卖冷笑话 ——</view>
+        <view class="xh">
+          {{xs[xsI]}}
+          <view class="more">
+            <image src="../../imgs/xiao.png" class="xiao" />
+            <text class="more-t" bindtap="morexh">再来一个</text>
+          </view>
+        </view>
+        <view class="title">—— 今天吃点啥呢 ——</view>
+        <view class="cs">
+          <view class="foodName">{{current || '今天吃点啥呢'}}</view>
+          <view data-event-opts="{{[['tap',[['onRandom']]]]}}" class="randomBtn" bindtap="onRandom">
+            {{''+(processing?'停止':isFirst?'随机选一个':'不行, 换一个')+''}}
+          </view>
+        </view>
+        <view class="ascf">
+          <image src="/cp/ascf.jpg" />
+        </view>
+        <view class="scjp-v"  bindtap="goxr">生成你自己的举牌小人</view>
+        <view style="height:60rpx;"></view>
+        <ad unit-id="adunit-bd56710a37a04282"></ad>
+      </block>
+      <block wx:if="{{act!=0}}">
+        <view class="title">—— 买点菜自己来动手 ——</view>
+        <view class="hb-flex">
+          <view class="hb" bindtap="wm5">
+            <image style="animation-duration: 1200ms;" src="../../imgs/ele.png" class="hb-icon animated {{animated1}}  infinite" />
+            <text class="hb-t">饿了么生鲜</text>
+          </view>
+          <view class="hb" bindtap="wm9">
+            <image  style="animation-duration: 1200ms;" src="../../imgs/mt.png" class="hb-icon animated {{animated2}}  infinite" />
+            <text class="hb-t">美团吃喝玩乐</text> 
+        </view>
+        </view>
+        <view class="title">其他福利</view>
+      </block>
+      <!--  -->
+    </scroll-view>
+  </view>
+  <!-- <view class="bottom-bb"></view> -->
+</view>

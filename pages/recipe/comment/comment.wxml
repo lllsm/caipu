@@ -1,0 +1,22 @@
+<view class="list">
+    <block wx:if="{{list_status}}">
+        <import src="../../../template/template.wxml"></import>
+        <template is="comment-list" data="{{...item,index:index}}" wx:for="{{list}}" wx:key="index"></template>
+        <view class="comment-button">
+            <view class="add-comment">
+                
+            </view>
+        </view>
+    </block>
+    <image class="comment-null-img" mode="aspectFill" src="{{null_comment}}" wx:else></image>
+</view>
+<view class="add-comment-text {{add_comment_hide}}" style="height: {{comment_height}}rpx;">
+    <view class="comment-buyt-but">
+        <view class="comment-cancel">取消</view>
+        <view bindtap="release_comment" class="comment-release">发布</view>
+        <view class="floar-clear"></view>
+    </view>
+    <view class="comment-text">
+        <textarea bindblur="text_blur" bindconfirm="release_button" bindfocus="text_focus" bindinput="content_monitor" class="comment-text-content" confirmType="send" focus="{{textarea_type}}" value="{{user_comment_content}}"></textarea>
+    </view>
+</view>

@@ -1,0 +1,130 @@
+<import src="../../template/template.wxml"></import>
+<import src="../../template/template.wxml"></import>
+<view class="recipe-all-content">
+    <block wx:if="{{type==0}}">
+        <image class="recipe-cover" mode="aspectFill" src="{{cover}}" wx:if="{{cover!=''}}"></image>
+        <image class="recipe-cover" mode="aspectFill" src="{{details.Cover}}" wx:else></image>
+    </block>
+    <video autoplay="true" class="horizontal-video" direction="0" id="recipe_video" objectFit="contain" poster="{{video_cover}}" src="{{video_url}}" wx:else></video>
+    <view class="recipe-detail">
+        <view class="title">
+            <block wx:if="{{title!=''}}">{{title}}</block>
+            <block wx:else>{{details.Title}}</block>
+        </view>
+        <view class="recipe-count">
+            <view class="recipe-view-count">
+                <block wx:if="{{view_count!=''}}">{{view_count}} 热度</block>
+                <block wx:else>{{details.ViewCount}} 热度</block>
+            </view>
+            <view class="recipe-view-count recipe-like-count">
+                <block wx:if="{{like_count!=''}}">{{like_count}} 收藏</block>
+                <block wx:else>{{details.LikeCount}} 收藏</block>
+            </view>
+        </view>
+        <view class="user-info">
+        </view>
+        <view class="recipe-infor" wx:if="{{intro!=''}}">{{intro}}</view>
+        <view class="operating-view">
+            <view class="enjoy-user" wx:if="{{enjoy_user!=''}}">用餐人数: {{enjoy_user}}</view>
+            <view class="cookie-time" style="{{cook_time_right}}" wx:if="{{cookie_time!=''}}">烹饪时间: {{cookie_time}}</view>
+        </view>
+        <view class="recipe-food">
+            <view class="food-title">食材</view>
+            <block wx:for="{{recipe_food}}" wx:key="index">
+                <view class="food" wx:if="{{index<=4}}">
+                    <navigator navigateBack class="food-name food-name-url" hoverClass="none" url="/pages/food/food?food_id={{item.FoodId}}" wx:if="{{item.FoodId!=''}}">{{item.Name}}</navigator>
+                    <view class="food-name" wx:else>{{item.Name}}</view>
+                    <view class="food-name food-num">{{item.Num}}</view>
+                </view>
+                <view class="food {{food_fold_status}}" wx:else>
+                    <navigator navigateBack class="food-name food-name-url" hoverClass="none" url="/pages/food/food?food_id={{item.FoodId}}" wx:if="{{item.FoodId!=''}}">{{item.Name}}</navigator>
+                    <view class="food-name" wx:else>{{item.Name}}</view>
+                    <view class="food-name food-num">{{item.Num}}</view>
+                </view>
+            </block>
+            <view bindtap="foodFold" class="food-show-btn {{fold_food_btn}}">显示所有食材↓</view>
+            <template is="list-ad" data="{{...item,index:index}}" wx:for="{{food_ad_list}}" wx:key="index"></template>
+        </view>
+        <view class="steps recipe-fold" style="height: {{fold_height}}rpx">
+            <view class="step-title">烹饪步骤</view>
+            <view class="recipe-step">
+                <view bindtap="stepFold" class="fold-btn {{fold_step_btn}}" style="margin-top: {{fold_btn_height}}rpx">
+                    <view>展开全部步骤 ↓</view>
+                </view>
+                <block wx:for="{{recipe_step}}" wx:key="index">
+                    <blick wx:if="{{item.ModuleAd}}">
+                        <template is="list-ad" data="{{...item,index:index}}"></template>
+                    </blick>
+                    <view class="step">
+                        <view class="step-num">步骤 {{item.Order}}/{{step_count}}</view>
+                        <image bindtap="previewImg" class="step-img" data-img="{{item.StepImg}}" lazyLoad="true" mode="aspectFill" src="{{item.StepImg}}" wx:if="{{item.StepImg!=''}}"></image>
+                        <view class="step-content">{{item.Intro}}</view>
+                    </view>
+                </block>
+            </view>
+        </view>
+        <view class="tips" style="display: {{fold_status}}" wx:if="{{tips!=''}}">
+            <view class="tips-title">小贴士</view>
+            <view class="tips-content">{{tips}}</view>
+        </view>
+        <view class="update-time">发布于{{update_time}}</view>
+        <view class="digg">
+            <view bindtap="recipeDigg" class="digg-region">
+                <view class="digg-but digg-but-select" wx:if="{{isdigg}}">
+                    <image class="digg-img" mode="aspectFill" src="../../images/common/digg_select.png"></image>
+                    <view class="digg-num digg-num-select">{{digg_recipe}}</view>
+                </view>
+                <blick wx:else>
+                    <view class="digg-but">
+                        <image class="digg-img" mode="aspectFill" src="../../images/common/digg.png"></image>
+                        <view class="digg-num" wx:if="{{digg_recipe>0}}">{{digg_recipe}}</view>
+                        <view class="digg-num" wx:else>赞</view>
+                    </view>
+                </blick>
+            </view>
+        </view>
+        <block wx:if="{{comment.length!=''}}">
+            <import src="../../template/template.wxml"></import>
+            <view class="comment">
+                <view class="comment-title">评论</view>
+                <template is="comment-list" data="{{...item,index:index}}" wx:for="{{comment}}" wx:key="index"></template>
+                <view class="comment-all">
+                    <view class="comment-all-region">
+                        <view class="comment-all-but">
+                            <navigator navigateBack class="comment-all-title" hoverClass="none" url="comment/comment?id={{recipe_id}}&count={{comment_count}}">查看全部{{comment_count}}条评论</navigator>
+                        </view>
+                    </view>
+                </view>
+            </view>
+        </block>
+        <view class="split-line"></view>
+        <view class="related-recipe">
+            <view class="related-recipe-title">相关菜谱</view>
+            <view class="related-recipe-list">
+                <block wx:for="{{related_recipe}}" wx:key="index">
+                    <blick wx:if="{{item.ModuleAd}}">
+                        <template is="list-ad" data="{{...item,index:index}}"></template>
+                    </blick>
+                    <template is="recipe-list" data="{{...item,index:index}}"></template>
+                </block>
+            </view>
+        </view>
+        <view class="add-comment {{bottom_but_class}}">
+            <!-- <view class="favorite">
+                <button class="share-button" openType="share">
+                    <image class="share-img" mode="aspectFill" src="../../images/recipe/share.png"></image>
+                </button>
+            </view> -->
+        </view>
+    </view>
+    <view class="add-comment-text {{add_comment_hide}}" style="height: {{comment_height}}rpx;">
+        <view class="comment-buyt-but">
+            <view class="comment-cancel">取消</view>
+            <view bindtap="release_comment" class="comment-cancel comment-release">发布</view>
+            <view class="floar-clear"></view>
+        </view>
+        <view class="comment-text">
+            <textarea bindblur="text_blur" bindconfirm="content_confirm" bindfocus="text_focus" bindinput="content_monitor" class="comment-text-content" confirmType="send" focus="{{textarea_type}}" value="{{user_comment_content}}"></textarea>
+        </view>
+    </view>
+</view>

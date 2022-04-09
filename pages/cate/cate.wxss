@@ -1,0 +1,159 @@
+.page {
+    padding: 0 28rpx 30rpx 50rpx;
+}
+
+.head {
+    display: flex;
+    padding: 31rpx 50rpx 0 50rpx;
+    background: #FFFFFF;
+    position: fixed;
+    top: 0rpx;
+    z-index: 2;
+}
+
+.head-title {
+    width: 200rpx;
+    font-size: 48rpx;
+    font-family: PingFangSC-Medium,PingFang SC;
+    font-weight: 500;
+    color: #000000;
+    line-height: 67rpx;
+}
+
+.sort-mode {
+    display: flex;
+    padding: 13rpx 0 0 100rpx;
+}
+
+.sort-default {
+    width: 122rpx;
+    height: 42rpx;
+    font-size: 30rpx;
+    font-family: PingFangSC-Medium,PingFang SC;
+    font-weight: 500;
+    color: #666666;
+    line-height: 42rpx;
+    padding: 0 0 20rpx 56rpx;
+}
+
+.sort-select {
+    width: 122rpx;
+    height: 42rpx;
+    font-size: 30rpx;
+    font-family: PingFangSC-Medium,PingFang SC;
+    font-weight: 500;
+    color: #D42C1F;
+    line-height: 42rpx;
+    padding: 0 0 20rpx 56rpx;
+}
+
+.list {
+    padding-top: 10rpx;
+}
+
+.related-recipe {
+    height: auto;
+    padding-top: 45rpx;
+}
+
+.related-recipe-title {
+    font-size: 48rpx;
+    font-weight: 500;
+    color: #000000;
+    line-height: 67rpx;
+}
+
+.recipe-list {
+    height: auto;
+    padding-top: 120rpx;
+}
+
+.related-recipe-view {
+    display: flex;
+}
+
+.related-recipe-view-padd {
+    display: flex;
+    padding-top: 76rpx;
+}
+
+.list-left {
+    height: auto;
+}
+
+.related-recipe-cover {
+    width: 309rpx;
+    height: 197rpx;
+    border-radius: 10rpx;
+}
+
+.recipe-list-play {
+    width: 36rpx;
+    height: 36rpx;
+    position: absolute;
+    display: flex;
+    margin: -190rpx 260rpx;
+    align-items: center;
+}
+
+.list-right {
+    height: auto;
+    padding: 0 0 0 39rpx;
+}
+
+.recipe-title {
+    width: auto;
+    height: 100rpx;
+    font-size: 34rpx;
+    font-weight: 400;
+    color: #000000;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-height: 48rpx;
+}
+
+.recipe-user-name {
+    width: auto;
+    padding: 5rpx 0 11rpx 0;
+    font-size: 26rpx;
+    font-weight: 400;
+    color: #999999;
+    line-height: 37rpx;
+}
+
+.related-recipe-counts {
+    display: flex;
+    padding-top: 11rpx;
+}
+
+.related-recipe-viewcount {
+    font-size: 26rpx;
+    font-weight: 400;
+    color: #999999;
+    line-height: 37rpx;
+}
+
+.related-recipe-likecount {
+    padding-left: 25rpx;
+    font-size: 26rpx;
+    font-weight: 400;
+    color: #999999;
+    line-height: 37rpx;
+}
+
+.null-data {
+    text-align: center;
+}
+
+.null-data-img {
+    width: 158rpx;
+    height: 158rpx;
+    padding: 450rpx 0 30rpx 0;
+}
+
+.null-data-title {
+    font-size: 30rpx;
+    font-weight: 400;
+    color: #999999;
+    line-height: 42rpx;
+}

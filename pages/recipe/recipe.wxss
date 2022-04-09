@@ -1,0 +1,768 @@
+.recipe-cover {
+    width: 750rpx;
+    height: 512rpx;
+    padding-top: 2rpx;
+}
+
+.horizontal-video {
+    width: 750rpx;
+    height: 426rpx;
+    margin-top: 2rpx;
+}
+
+.recipe-detail {
+    padding: 30rpx 50rpx 76rpx 50rpx;
+}
+
+.title {
+    width: 650rpx;
+    height: auto;
+    font-size: 54rpx;
+    font-weight: 500;
+    color: #333333;
+    line-height: 75rpx;
+}
+
+.recipe-count {
+    padding: 20rpx 0;
+    display: flex;
+}
+
+.recipe-view-count {
+    width: 200rpx;
+    height: 37rpx;
+    font-size: 26rpx;
+    font-weight: 400;
+    color: #999999;
+    line-height: 37rpx;
+}
+
+.recipe-like-count {
+    width: 261rpx;
+}
+
+.user-view {
+    display: flex;
+    width: 504rpx;
+}
+
+.user-info {
+    display: flex;
+    padding-top: 30rpx;
+}
+
+.user-avatar {
+    width: 110rpx;
+    height: 110rpx;
+    border-radius: 60rpx;
+}
+
+.user-name {
+    width: auto;
+    height: 48rpx;
+    font-size: 34rpx;
+    padding: 25rpx 0 0 25rpx;
+    font-weight: 400;
+    color: #333333;
+    line-height: 48rpx;
+}
+
+.recipe-infor {
+    width: 658rpx;
+    height: auto;
+    font-size: 34rpx;
+    padding-top: 58rpx;
+    font-weight: 400;
+    color: #000000;
+    line-height: 48rpx;
+}
+
+.attention {
+    width: 148rpx;
+    height: 64rpx;
+    float: right;
+    border-radius: 32px;
+    border: 1px solid #D42C1F;
+    margin-top: 20rpx;
+}
+
+.attention-gray {
+    border: 1px solid #C8C8C8;
+}
+
+.attention-title {
+    height: 64rpx;
+    text-align: center;
+    font-size: 30rpx;
+    font-weight: 400;
+    color: #D42C1F;
+    line-height: 65.5rpx;
+}
+
+.attention-title-gray {
+    color: #666666;
+}
+
+.operating-view {
+    display: flex;
+    flex-direction: row-reverse;
+    padding: 30rpx 0 0 0;
+}
+
+.cookie-time {
+    width: 325rpx;
+    font-size: 26rpx;
+    font-weight: 400;
+    color: #999999;
+    line-height: 37rpx;
+}
+
+.cookie-time .cookie-time-right {
+    text-align: right;
+}
+
+.enjoy-user {
+    width: 325rpx;
+    font-size: 26rpx;
+    font-weight: 400;
+    color: #999999;
+    line-height: 37rpx;
+    text-align: right;
+}
+
+.recipe-food {
+    padding-top: 68rpx;
+}
+
+.food-title {
+    width: 650rpx;
+    height: 67rpx;
+    font-size: 48rpx;
+    padding-bottom: 31rpx;
+    font-weight: 500;
+    color: #000000;
+    line-height: 67rpx;
+}
+
+.food {
+    display: flex;
+}
+
+.food-name {
+    width: 329rpx;
+    font-size: 34rpx;
+    text-align: left;
+    font-weight: 400;
+    color: #000000;
+    line-height: 100rpx;
+}
+
+.food-name-url {
+    color: #406599;
+}
+
+.food-num {
+    text-align: right;
+}
+
+.food-hide {
+    display: none;
+}
+
+.food-show {
+    display: flex;
+}
+
+.food-show-btn {
+    padding-top: 30rpx;
+    font-size: 34rpx;
+    text-align: right;
+    color: #406599;
+}
+
+.steps {
+    height: auto;
+    padding-top: 77rpx;
+}
+
+.step-title {
+    width: 650rpx;
+    height: 67rpx;
+    font-size: 48rpx;
+    font-weight: 500;
+    color: #000000;
+    line-height: 67rpx;
+}
+
+.step {
+    height: auto;
+}
+
+.step-hide {
+    height: auto;
+    display: none;
+}
+
+.step-num {
+    width: 650rpx;
+    height: 50rpx;
+    font-size: 36rpx;
+    padding: 75rpx 0 27rpx 0;
+    font-weight: 500;
+    color: #000000;
+    line-height: 50rpx;
+}
+
+.step-img {
+    width: 650rpx;
+    height: 414rpx;
+    border-radius: 20rpx;
+}
+
+.step-content {
+    width: 649rpx;
+    height: auto;
+    font-size: 34rpx;
+    padding-top: 32rpx;
+    font-weight: 400;
+    color: #000000;
+    line-height: 48rpx;
+}
+
+.occupancy {
+    height: 86rpx;
+}
+
+.fold-height {
+    height: 1334rpx;
+}
+
+.recipe-fold {
+    overflow: hidden;
+}
+
+.fold-margin {
+    margin-top: 1128rpx;
+}
+
+.fold-btn {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 206rpx;
+    background-image: -webkit-gradient(linear,left top,left bottom,from(hsla(0,0%,98%,0)),color-stop(28%,hsla(0,0%,98%,0.9)),color-stop(49.1%,#f6f6f6),to(#f6f6f6));
+    background-image: -o-linear-gradient(top,hsla(0,0%,98%,0),hsla(0,0%,98%,0.9) 28%,#f6f6f6 49.1%,#f6f6f6);
+    background-image: linear-gradient(top,hsla(0,0%,98%,0),hsla(0,0%,98%,0.9) 28%,#f6f6f6 49.1%,#f6f6f6);
+}
+
+.fold-btn view {
+    width: 100%;
+    overflow: hidden;
+    clear: both;
+    text-align: center;
+    font-size: 34rpx;
+    color: #D42C1F;
+    padding-top: 112rpx;
+}
+
+.fold-mod-segmentation {
+    padding-top: 48rpx;
+    border-bottom: 24rpx solid #f4f4f4;
+}
+
+.fold-hide {
+    display: none;
+}
+
+.fold-show {
+    display: block;
+}
+
+.tips {
+    height: auto;
+    padding-top: 86rpx;
+}
+
+.tips-title {
+    font-size: 48rpx;
+    font-weight: 500;
+    color: #000000;
+    line-height: 67rpx;
+}
+
+.tips-content {
+    font-size: 34rpx;
+    padding-top: 39rpx;
+    font-weight: 400;
+    color: #000000;
+    line-height: 48rpx;
+}
+
+.update-time {
+    font-size: 22rpx;
+    font-weight: 400;
+    color: #999999;
+    line-height: 30rpx;
+    padding-top: 81rpx;
+}
+
+.digg {
+    display: inline-block;
+    width: 252rpx;
+    height: 100rpx;
+    padding: 74rpx 199rpx 85rpx 199rpx;
+    border-bottom: 1px solid#EEEEEE;
+}
+
+.digg-region {
+    align-items: center;
+}
+
+.digg-but {
+    display: flex;
+    align-items: center;
+    min-width: 252rpx;
+    height: 100rpx;
+    color: #000000;
+    font-size: 26rpx;
+    border: 1px solid #999999;
+    border-radius: 50rpx!important;
+    margin: 0 auto;
+}
+
+.digg-img {
+    width: 40rpx;
+    height: 40rpx;
+    padding-left: 81rpx;
+}
+
+.digg-num {
+    width: 60rpx;
+    height: 37rpx;
+    font-size: 26rpx;
+    padding: 5rpx 0 0 18rpx;
+    font-weight: 400;
+    color: #999999;
+    line-height: 37rpx;
+}
+
+.digg-but-select {
+    display: flex;
+    align-items: center;
+    min-width: 252rpx;
+    height: 100rpx;
+    color: #000000;
+    font-size: 26rpx;
+    border: 1px solid #E30012;
+    border-radius: 50rpx!important;
+    margin: 0 auto;
+}
+
+.digg-num-select {
+    color: #E30012;
+}
+
+.comment {
+    height: auto;
+}
+
+.comment-title {
+    padding-top: 59rpx;
+    font-size: 48rpx;
+    font-weight: 500;
+    color: #000000;
+    line-height: 67rpx;
+}
+
+.comment-list {
+    height: auto;
+    padding-top: 60rpx;
+}
+
+.comment-user-info {
+    width: auto;
+}
+
+.comment-user {
+    display: flex;
+    float: left;
+}
+
+.comment-user-avatar {
+    width: 48rpx;
+    height: 48rpx;
+    border-radius: 50rpx;
+}
+
+.comment-user-name {
+    padding: 0 0 0 20rpx;
+    font-size: 30rpx;
+    font-weight: 400;
+    color: #999999;
+    line-height: 42rpx;
+}
+
+.comment-digg {
+    padding: 0 0 25rpx 50rpx;
+    display: flex;
+    float: right;
+}
+
+.comment-digg-img {
+    width: 31rpx;
+    height: 32rpx;
+}
+
+.comment-digg-num {
+    padding-left: 13rpx;
+    font-size: 26rpx;
+    font-weight: 400;
+    color: #666666;
+    line-height: 37rpx;
+}
+
+.comment-digg-select {
+    padding-left: 13rpx;
+    font-size: 26rpx;
+    font-weight: 400;
+    color: #E30012;
+    line-height: 37rpx;
+}
+
+.ccomment-digg-null {
+    padding-left: 18rpx;
+}
+
+.clearfix {
+    clear: both;
+}
+
+.comment-content {
+    padding: 25rpx 0 0 49rpx;
+    font-size: 34rpx;
+    font-weight: 400;
+    color: #000000;
+    line-height: 48rpx;
+}
+
+.comment-time {
+    padding: 24rpx 0 0 49rpx;
+    font-size: 26rpx;
+    font-weight: 400;
+    color: #999999;
+    line-height: 37rpx;
+}
+
+.comment-all {
+    display: inline-block;
+    width: 509rpx;
+    height: 100rpx;
+    padding: 81rpx 69rpx 80rpx 72rpx;
+}
+
+.comment-all-region {
+    align-items: center;
+}
+
+.comment-all-but {
+    align-items: center;
+    min-width: 252rpx;
+    height: 100rpx;
+    color: #000000;
+    font-size: 26rpx;
+    border: 1px solid #999999;
+    border-radius: 50rpx!important;
+    margin: 0 auto;
+}
+
+.comment-all-title {
+    width: 400rpx;
+    padding: 26rpx 55rpx;
+    text-align: center;
+    font-size: 34rpx;
+    font-weight: 400;
+    color: #000000;
+    line-height: 48rpx;
+}
+
+.comment-null-img {
+    width: 310rpx;
+    height: 256rpx;
+    margin: 50rpx 170rpx;
+}
+
+.split-line {
+    width: 650rpx;
+    height: 2rpx;
+    background-color: #EEEEEE;
+}
+
+.clipboard-list {
+    height: auto;
+    padding: 20rpx 0;
+}
+
+.clipboard-img {
+    width: 650rpx;
+    height: 197rpx;
+}
+
+.related-recipe {
+    height: auto;
+    padding-top: 45rpx;
+}
+
+.related-recipe-title {
+    font-size: 48rpx;
+    font-weight: 500;
+    color: #000000;
+    line-height: 67rpx;
+}
+
+.related-recipe-list {
+    height: auto;
+    padding-top: 54rpx;
+}
+
+.related-recipe-view {
+    display: flex;
+}
+
+.related-recipe-view-padd {
+    display: flex;
+    padding-top: 76rpx;
+}
+
+.list-left {
+    height: auto;
+}
+
+.related-recipe-cover {
+    width: 309rpx;
+    height: 197rpx;
+    border-radius: 10rpx;
+}
+
+.recipe-list-play {
+    width: 36rpx;
+    height: 36rpx;
+    position: absolute;
+    display: flex;
+    margin: -190rpx 260rpx;
+    align-items: center;
+}
+
+.list-right {
+    height: auto;
+    padding: 0 0 0 39rpx;
+}
+
+.recipe-title {
+    width: auto;
+    height: 100rpx;
+    font-size: 34rpx;
+    font-weight: 400;
+    color: #000000;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-height: 48rpx;
+}
+
+.recipe-user-name {
+    width: auto;
+    padding: 5rpx 0 11rpx 0;
+    font-size: 26rpx;
+    font-weight: 400;
+    color: #999999;
+    line-height: 37rpx;
+}
+
+.related-recipe-counts {
+    display: flex;
+    padding-top: 11rpx;
+}
+
+.related-recipe-viewcount {
+    font-size: 26rpx;
+    font-weight: 400;
+    color: #999999;
+    line-height: 37rpx;
+}
+
+.related-recipe-likecount {
+    padding-left: 25rpx;
+    font-size: 26rpx;
+    font-weight: 400;
+    color: #999999;
+    line-height: 37rpx;
+}
+
+.add-comment {
+    height: 162rpx;
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    left: 30rpx;
+    z-index: 99;
+}
+
+.comment-but {
+    width: 240rpx;
+    height: 100rpx;
+    background: #FFFFFF;
+    box-shadow: 0 5rpx 20rpx 0 #D0D2D6;
+    border-radius: 50rpx;
+}
+
+.comment-but-title {
+    width: 130rpx;
+    height: 42rpx;
+    font-size: 30rpx;
+    text-align: center;
+    padding: 28rpx 55rpx 30rpx 55rpx;
+    font-weight: 400;
+    color: #666666;
+    line-height: 42rpx;
+}
+
+.favorite {
+    width: 240rpx;
+    height: 100rpx;
+    background: #FFFFFF;
+    margin-left: 209rpx;
+    box-shadow: 0 5rpx 20rpx 0 #D0D2D6;
+    border-radius: 50rpx;
+}
+
+.favorite-img {
+    width: 64rpx;
+    height: 64rpx;
+    padding: 18rpx 20rpx 18rpx 34rpx;
+}
+
+.button-gradually-hide {
+    animation: 500ms but-hide 0s infinite;
+    animation-iteration-count: 1;
+}
+
+@-webkit-keyframes but-hide {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes but-hide {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+.comment-but-hide {
+    display: none;
+}
+
+.button-gradually-show {
+    animation: 1s but-show 0s infinite;
+    animation-iteration-count: 1;
+}
+
+@-webkit-keyframes but-show {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes but-show {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.add-comment-text {
+    height: 890rpx;
+    background: #F7F7F7;
+    border-radius: 25rpx 25rpx 0px 0px;
+    position: fixed;
+    bottom: 0;
+    z-index: 99;
+}
+
+.add-comment-hide {
+    display: none;
+}
+
+.add-comment-show {
+    display: block;
+}
+
+.comment-buyt-but {
+    margin: 35rpx 30rpx 0 30rpx;
+}
+
+.comment-cancel {
+    width: auto;
+    font-size: 32rpx;
+    font-weight: 400;
+    color: #333333;
+    line-height: 45rpx;
+    float: left;
+}
+
+.comment-release {
+    float: right;
+}
+
+.comment-text {
+    width: 690rpx;
+    height: 135rpx;
+    background: #FFFFFF;
+    border-radius: 8rpx;
+    margin: 40rpx 30rpx 30rpx 30rpx;
+}
+
+.comment-text-content {
+    width: 635rpx;
+    height: 108rpx;
+    background: #FFFFFF;
+    border-radius: 8rpx;
+    padding: 22rpx 23rpx 0 32rpx;
+}
+
+.floar-clear {
+    clear: both;
+}
+
+.share-button {
+    background-color: #FFFFFF;
+    border-color: #FFFFFF;
+    display: inline-block;
+    padding: 0 0 0 0;
+    width: 90rpx;
+    height: 100rpx;
+}
+
+.share-img {
+    width: 64rpx;
+    height: 64rpx;
+    padding: 18rpx 38rpx 18rpx 20rpx;
+}
+
+button::after {
+    border: none;
+}

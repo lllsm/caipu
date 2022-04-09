@@ -1,0 +1,34 @@
+<view class="rank-head">
+    <view class="head-title">排行榜</view>
+    <scroll-view scrollX class="cata-list">
+        <block wx:for="{{rank_cate.List}}" wx:key="index">
+            <view bindtap="cateBut" class="cate-name-select" data-id="{{item.Id}}" wx:if="{{cate_id==item.Id}}">{{item.Name}}</view>
+            <view bindtap="cateBut" class="cate-name" data-id="{{item.Id}}" wx:else>{{item.Name}}</view>
+        </block>
+    </scroll-view>
+</view>
+<view class="recipe-list">
+    <block wx:if="{{recipe_list.List.length>0}}">
+        <view class="recipe" wx:for="{{recipe_list.List}}" wx:key="index">
+            <navigator navigateBack hoverClass="none" url="/pages/recipe/recipe?id={{item.RecipeId}}&type={{item.Type}}">
+                <view class="recipe-info">
+                    <view class="recipe-title">{{item.BaiduTitle}}</view>
+                    <view class="recipe-intro">{{item.Intro}}</view>
+                </view>
+                <view class="recipe-cover">
+                    <image class="cover-img" lazyLoad="true" mode="aspectFill" src="{{item.Cover}}"></image>
+                    <image class="rank-img" mode="aspectFill" src="/images/common/rank.png"></image>
+                    <view class="rank-limit">{{index+1}}</view>
+                </view>
+            </navigator>
+            <view class="recipe-count">
+                <view class="view-count">{{item.ViewCount}} 热度</view>
+                <view class="like-count">{{item.LikeCount}} 收藏</view>
+            </view>
+        </view>
+    </block>
+    <view class="null-data" wx:else>
+        <image class="null-data-img" mode="aspectFill" src="/images/common/null_data.png"></image>
+        <view class="null-data-title">暂无数据</view>
+    </view>
+</view>

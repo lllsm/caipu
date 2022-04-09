@@ -1,0 +1,42 @@
+<view class="segment" wx:if="{{request_status}}">
+    <block wx:for="{{list}}" wx:key="index">
+        <view class="food-title-first">
+            <view class="first-title">{{item.Name}}</view>
+        </view>
+        <block wx:for="{{item.List}}" wx:key="index">
+            <view class="food-title-second">
+                <view class="second-title">{{item.Name}}</view>
+            </view>
+            <view class="food-segment">
+                <navigator navigateBack class="food-segment-default" hoverClass="none" url="../food/food?food_id={{item.Id}}" wx:for="{{item.Items.Show}}" wx:key="index">
+                    <image class="food-cover" lazyLoad="true" mode="aspectFill" src="{{item.Cover}}"></image>
+                    <view class="food-name">{{item.Name}}</view>
+                </navigator>
+                <block wx:for="{{item.Items.Hide}}" wx:key="index">
+                    <navigator navigateBack class="food-segment-show" hoverClass="none" url="../food/food?food_id={{item.Id}}" wx:if="{{but_id_all[item.ButKey]}}">
+                        <image class="food-cover" lazyLoad="true" mode="aspectFill" src="{{item.Cover}}"></image>
+                        <view class="food-name" url="">{{item.Name}}</view>
+                    </navigator>
+                    <navigator navigateBack class="food-segment-hide" hoverClass="none" url="../food/food?food_id={{item.Id}}" wx:elif="{{item.ButKey==hide_but_id}}">
+                        <image class="food-cover" lazyLoad="true" mode="aspectFill" src="{{item.Cover}}"></image>
+                        <view class="food-name" url="">{{item.Name}}</view>
+                    </navigator>
+                </block>
+            </view>
+            <view class="expand-segment" wx:if="{{item.Items.Hide.length>0}}">
+                <view bindtap="unfoldData" class="expand" data-but-id="{{item.ButKey}}" data-id="{{item.MoreHideId}}" wx:if="{{!but_id_all[item.ButKey]}}">
+                    <image class="expand-img" mode="aspectFill" src="/images/food/unfold.png"></image>
+                    <view class="expand-title">展开</view>
+                </view>
+                <view bindtap="foldData" class="expand" data-but-id="{{item.ButKey}}" data-id="{{item.MoreHideId}}" wx:else>
+                    <image class="expand-img" mode="aspectFill" src="/images/food/fold.png"></image>
+                    <view class="expand-title">收起</view>
+                </view>
+            </view>
+        </block>
+    </block>
+</view>
+<view class="null-data" wx:else>
+    <image class="null-data-img" lazyLoad="true" mode="aspectFill" src="/images/common/null_data.png"></image>
+    <view class="null-data-title">暂无数据</view>
+</view>

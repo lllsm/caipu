@@ -1,0 +1,37 @@
+<view class="swan-security-padding-bottom" wx:if="{{request_status}}">
+    <view class="food-title-segment">
+        <image class="food-cover" lazyLoad="true" mode="aspectFill" src="{{cover}}"></image>
+        <view class="title-segment">
+            <block wx:if="{{aname!=''}}">
+                <view class="food-title">{{title}}</view>
+                <view class="food-aname">别名: {{aname}}</view>
+            </block>
+            <view class="food-title food-title-high" wx:else>{{title}}</view>
+        </view>
+    </view>
+    <view class="content-segment">
+        <view class="content-food" wx:for="{{description.List}}" wx:key="index">
+            <view class="content-title">{{item.Title}}</view>
+            <block wx:for="{{item.Content.List}}" wx:key="index">
+                <view class="food-ingredient" wx:if="{{item.Name}}">
+                    <view class="food-name">{{item.Name}}</view>
+                    <view class="food-num">{{item.Num}}</view>
+                </view>
+                <view class="content" wx:else>{{item}}</view>
+            </block>
+        </view>
+        <block wx:if="{{recommend_list.Count>0}}">
+            <import src="../../template/template.wxml"></import>
+            <view class="related-recipe">
+                <view class="related-recipe-title">相关菜谱</view>
+                <view class="related-recipe-list">
+                    <template is="recipe-list" data="{{...item,index:index}}" wx:for="{{recommend_list.List}}" wx:key="index"></template>
+                </view>
+            </view>
+        </block>
+    </view>
+</view>
+<view class="null-data" wx:else>
+    <image class="null-data-img" mode="aspectFill" src="/images/common/null_data.png"></image>
+    <view class="null-data-title">暂无数据</view>
+</view>

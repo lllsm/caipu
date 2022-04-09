@@ -1,0 +1,55 @@
+{
+  "pages": [
+    "pages/index2/index",
+    "pages/index/index",
+    "pages/all_cate/all_cate",
+    "pages/all_food/all_food",
+    "pages/user/user",
+    "pages/user/userinfo/userinfo",
+    "pages/cate/cate",
+    "pages/cate/ranklist/ranklist",
+    "pages/recipe/recipe",
+    "pages/recipe/comment/comment",
+    "pages/food/food"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#FFFFFF",
+    "navigationBarTitleText": "荷包蛋菜谱",
+    "navigationBarTextStyle": "black",
+    "onReachBottomDistance": 100
+  },
+  "tabBar": {
+    "color": "#a0a0a0",
+    "selectedColor": "#000000",
+    "backgroundColor": "#ffffff",
+    "borderStyle": "black",
+    "list": [
+      {
+        "pagePath": "pages/index2/index",
+        "text": "首页",
+        "iconPath": "images/common/index.png",
+        "selectedIconPath": "images/common/index_select.png"
+      },
+      {
+        "pagePath": "pages/index/index",
+        "text": "神券",
+        "iconPath": "images/common/cp.png",
+        "selectedIconPath": "images/common/cp1.png"
+      },
+      {
+        "pagePath": "pages/all_cate/all_cate",
+        "text": "分类",
+        "iconPath": "images/common/cate.png",
+        "selectedIconPath": "images/common/cate_select.png"
+      },
+      {
+        "pagePath": "pages/all_food/all_food",
+        "text": "食材",
+        "iconPath": "images/common/food.png",
+        "selectedIconPath": "images/common/food_select.png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}

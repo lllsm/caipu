@@ -1,0 +1,303 @@
+.search {
+    width: 650rpx;
+    height: 80rpx;
+    padding: 20rpx 50rpx 21rpx 50rpx;
+    background: #FFFFFF;
+    z-index: 2;
+}
+
+.search-bottom {
+    width: 650rpx;
+    height: 80rpx;
+    border-radius: 45rpx;
+    background: #EEEEEE;
+}
+
+.search-img {
+    width: 44rpx;
+    height: 44rpx;
+    position: absolute;
+    left: 232rpx;
+    top: 38rpx;
+    z-index: 2;
+}
+
+.search-img-select {
+    width: 44rpx;
+    height: 44rpx;
+    position: absolute;
+    left: 78rpx;
+    top: 38rpx;
+    z-index: 2;
+}
+
+.search-input {
+    width: 590rpx;
+    height: 80rpx;
+    border-radius: 45rpx;
+    background-color: #EEEEEE;
+    text-align: left;
+    padding: 0 30rpx;
+}
+
+.search-pla {
+    font-size: 26rpx;
+    color: #666666;
+    text-align: center;
+}
+
+.search-pla-select {
+    font-size: 26rpx;
+    color: #666666;
+}
+
+.placeholder {
+    float: left;
+}
+
+.banner-module {
+    height: 414rpx;
+}
+
+.banner-content {
+    text-align: center;
+}
+
+.banner-img {
+    width: 650rpx;
+    height: 414rpx;
+    border-radius: 26rpx;
+}
+
+.banner-title {
+    width: 650rpx;
+    display: flex;
+    flex-direction: row;
+    padding: 35rpx 50rpx 0 50rpx;
+}
+
+.banner-tage {
+    width: 150rpx;
+    text-align: center;
+    background-color: #D51B1E;
+    color: #ffffff;
+    font-size: 26rpx;
+    border-radius: 30rpx;
+    padding: 4rpx;
+}
+
+.title-banner {
+    padding-left: 20rpx;
+    width: 460rpx;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.index-cate {
+    padding: 30rpx 0 15rpx 20rpx;
+}
+
+.cate-view {
+    padding: 16rpx 30rpx;
+    display: inline-block;
+}
+
+.cate-img {
+    width: 80rpx;
+    height: 80rpx;
+}
+
+.cate-name {
+    width: 80rpx;
+    height: 37rpx;
+    font-size: 26rpx;
+    font-weight: 400;
+    color: #000000;
+    line-height: 37rpx;
+    text-align: center;
+}
+
+.index-rank {
+    height: auto;
+    padding-top: 50rpx;
+    white-space: nowrap;
+}
+
+.rank-head {
+    height: 70rpx;
+    padding: 0 50rpx;
+}
+
+.head-title {
+    width: 224rpx;
+    height: 62rpx;
+    font-size: 44rpx;
+    float: left;
+    font-weight: 500;
+    color: #000000;
+    line-height: 62rpx;
+}
+
+.rank-more {
+    width: 53rpx;
+    height: 37rpx;
+    font-size: 26rpx;
+    float: right;
+    font-weight: 400;
+    color: #000000;
+    padding: 10rpx 52rpx 25rpx 50rpx;
+    line-height: 37rpx;
+}
+
+.more-img {
+    width: 12rpx;
+    height: 22rpx;
+    padding: 0 0 0 10rpx;
+}
+
+.rank-list {
+    height: auto;
+}
+
+.rank-scroll {
+    padding-top: 20rpx;
+    display: inline-block;
+    white-space: nowrap;
+}
+
+.rank-content {
+    display: inline-block;
+    padding-left: 35rpx;
+}
+
+.set-rank {
+    display: inline-block;
+    padding-left: 50rpx;
+}
+
+.end-rank {
+    display: inline-block;
+    padding: 0 50rpx 0 35rpx;
+}
+
+.rank-cover {
+    width: 310rpx;
+    height: 310rpx;
+    background: #D8D8D8;
+    box-shadow: 0 10rpx 20rpx 0 #D6D6D6;
+    border-radius: 20rpx;
+}
+
+.rank-title {
+    width: 246rpx;
+    height: 42rpx;
+    font-size: 30rpx;
+    padding-top: 20rpx;
+    font-weight: 500;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: #000000;
+    line-height: 42rpx;
+}
+
+.play-button-img-rank {
+    width: 80rpx;
+    height: 80rpx;
+    position: absolute;
+    margin: 115rpx 0 0 -195rpx;
+}
+
+.index-list {
+    height: auto;
+    padding: 50rpx 50rpx 41rpx 50rpx;
+}
+
+.list-title {
+    width: 182rpx;
+    height: 62rpx;
+    font-size: 44rpx;
+    font-weight: 500;
+    color: #000000;
+    line-height: 62rpx;
+}
+
+.recipe-list {
+    height: auto;
+    padding-top: 45rpx;
+}
+
+.user-info {
+    display: flex;
+    padding-bottom: 18rpx;
+}
+
+.user-avatar {
+    width: 72rpx;
+    height: 72rpx;
+    border-radius: 50rpx;
+}
+
+.user-name {
+    width: auto;
+    height: 42rpx;
+    font-size: 30rpx;
+    padding: 12rpx 0 0 16rpx;
+    font-weight: 400;
+    color: #333333;
+    line-height: 42rpx;
+}
+
+.recipe-content {
+    height: auto;
+}
+
+.recipe-title {
+    width: 632rpx;
+    height: 48rpx;
+    font-size: 34rpx;
+    padding: 18rpx 0;
+    font-weight: 500;
+    color: #000000;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    line-height: 48rpx;
+}
+
+.recipe-cover {
+    width: 650rpx;
+    height: 414rpx;
+    border-radius: 20rpx;
+}
+
+.recipe-count {
+    display: flex;
+    padding-top: 22rpx;
+}
+
+.recipe-view-count {
+    width: auto;
+    height: 37rpx;
+    font-size: 26rpx;
+    font-weight: 400;
+    color: #999999;
+    line-height: 37rpx;
+    padding-right: 35rpx;
+}
+
+.recipe-like-count {
+    width: auto;
+    height: 37rpx;
+    font-size: 26rpx;
+    font-weight: 400;
+    color: #999999;
+    line-height: 37rpx;
+}
+
+.play-button-img {
+    width: 100rpx;
+    height: 100rpx;
+    position: absolute;
+    margin: 157rpx 0 0 -375rpx;
+}

@@ -1,8 +1,11 @@
 <view class="search">
     <view class="search-bottom">
-        <image class="search-img-select" mode="aspectFill" src="../../images/common/search.png" wx:if="search_type"></image>
+        <image class="search-img-select" mode="aspectFill" src="../../images/common/search.png" wx:if="search_type">
+        </image>
         <image class="search-img" mode="aspectFill" src="../../images/common/search.png" wx:else></image>
-        <input bindblur="search_blur" bindconfirm="search_data" bindfocus="search" bindinput="search_monitor" class="search-input" confirmType="search" placeholder="搜索菜谱、食材" placeholderClass="{{placeholder_type}}" type="text"></input>
+        <input bindblur="search_blur" bindconfirm="search_data" bindfocus="search" bindinput="search_monitor"
+            class="search-input" confirmType="search" placeholder="搜索菜谱、食材" placeholderClass="{{placeholder_type}}"
+            type="text"></input>
     </view>
 </view>
 <view class="occupy-search"></view>
@@ -11,7 +14,8 @@
         <scroll-view scrollY="true">
             <block wx:for="{{list}}" wx:key="index">
                 <block wx:if="{{cate_id==item.id}}">
-                    <view bindtap="cateName" class="cate-name-list-select-end" id="{{item.id}}" wx:if="{{index+1==cate_count}}">
+                    <view bindtap="cateName" class="cate-name-list-select-end" id="{{item.id}}"
+                        wx:if="{{index+1==cate_count}}">
                         <view class="name-cate-select">{{item.Name}}</view>
                     </view>
                     <view bindtap="cateName" class="cate-name-list-select" id="{{item.id}}" wx:else>
@@ -26,18 +30,24 @@
         </scroll-view>
     </view>
     <view class="cate-content-list" style="height: {{height_ipx}}rpx">
-        <scroll-view class="cate-content" scrollIntoView="{{scroll_id}}" scrollY="true" style="height: {{height_ipx}}rpx">
+        <scroll-view class="cate-content" scrollIntoView="{{scroll_id}}" scrollY="true"
+            style="height: {{height_ipx}}rpx">
             <block wx:for="{{list}}" wx:key="index">
-                <view class="cate-head" id="{{item.id}}">
-                    <view class="horizontal-line"></view>
-                    <view class="cate-head-title">{{item.Name}}</view>
-                </view>
-                <view class="cate-type">
-                    <navigator navigateBack class="cate" hoverClass="none" url="../cate/cate?cate_id={{item.Id}}&name={{item.Name}}" wx:for="{{item.Items}}" wx:key="index">
-                        <view class="cate-name-but">
+
+                <view class="type-bg">
+                    <view class="cate-head" id="{{item.id}}">
+                        <view class="horizontal-line"></view>
+                        <view class="cate-head-title">{{item.Name}}</view>
+                    </view>
+                    <view class="cate-type">
+                        <navigator navigateBack class="cate" hoverClass="none"
+                            url="../cate/cate?cate_id={{item.Id}}&name={{item.Name}}" wx:for="{{item.Items}}"
+                            wx:key="index">
+                            <view class="cate-name-but">
                                 {{item.Name}}
                             </view>
-                    </navigator>
+                        </navigator>
+                    </view>
                 </view>
             </block>
             <view class="occupy"></view>

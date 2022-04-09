@@ -112,6 +112,7 @@ page{
     line-height: 37rpx;
     padding: 31rpx 0 40rpx 0;
     border-left: 1rpx solid #00bcd4;
+    font-weight: bold;
 }
 .name-cate-end{
     font-size: 36rpx;
@@ -121,6 +122,7 @@ page{
     line-height: 37rpx;
     padding: 31rpx 0 40rpx 0;
     border-left: 1rpx solid #00bcd4;
+    font-weight: bold;
 }
 
 .cate-content-list {

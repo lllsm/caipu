@@ -65,6 +65,7 @@
             <text class="more-t" bindtap="morexh">再来一个</text>
           </view>
         </view>
+        
         <view class="title">—— 今天吃点啥呢 ——</view>
         <view class="cs">
           <view class="foodName">{{current || '今天吃点啥呢'}}</view>

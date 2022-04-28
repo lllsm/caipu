@@ -106,6 +106,7 @@ page {
 .hb-icon {
   width: 130rpx;
   height: 130rpx;
+  flex-shrink: 0;
 }
 
 .flex2 .hb {
@@ -253,4 +254,22 @@ page {
   font-size: 34rpx;
   font-weight: bold;
   border-radius: 10rpx;
+}
+.shengquan {
+  display: grid;
+  grid-template-columns: auto auto;
+}
+.item-1{
+  /* height:100rpx; */
+  margin:10rpx;
+  background-color: #fff;
+  border-radius: 10rpx;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+}
+.text-1 {
+  font-size:26rpx;
+  margin:20rpx;
 }

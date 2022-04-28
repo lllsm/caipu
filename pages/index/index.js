@@ -57,60 +57,64 @@ Page({
     ],
     //外卖数据字段
     miniData: [
-      //饿了么1
+      {
+        //美团
+        "appId": "wxde8ac0a21135c07d",
+        "path": "/index/pages/h5/h5?lch=cps:waimai:5:65c5f4b9271221c79eae104d969a48a3:16571jutuikewx:33:85459&weburl=https%3A%2F%2Fdpurl.cn%2F0QUNUlAz&f_userId=1&f_token=1",
+        "name": "美团外卖红包天天领",
+        //这里改成你的链接
+      },
+      {
+        "appId": "wxde8ac0a21135c07d",
+        //这里改成你的链接
+        "path": "/index/pages/h5/h5?lch=cps:waimai:5:65c5f4b9271221c79eae104d969a48a3:16571jutuikewx:4:85459&weburl=https%3A%2F%2Fdpurl.cn%2F8uSmgBfz&f_userId=1&f_token=1",
+        "name": "商超生鲜红包天天领",
+      },
+      {
+        "appId": "wxde8ac0a21135c07d",
+        "path": "/index/pages/h5/h5?lch=mhqIykekFEV63u81zLSTaQViQ&noshare=1&f_userId=0&f_openId=0&f_token=0&weburl=https%3A%2F%2Fdpurl.cn%2FVNQ7J86z",
+        "name": "美团吃喝玩乐到店消费",
+        //这里改成你的链接
+      },
+      {
+        "appId": "wxde8ac0a21135c07d",
+        //这里改成你的链接
+        "path": "/index/pages/h5/h5?lch=mhqIykekFEV63u81zLSTaQViQ&noshare=1&f_userId=0&f_openId=0&f_token=0&weburl=https%3A%2F%2Fdpurl.cn%2FvIHQu8wz",
+        "name": "美团周末特价：吃喝玩乐、低至1元",
+      },
+      {
+        //饿了么
+        "appId": "wxece3a9a4c82f58c9",
+        //这里改成你的链接
+        "path": "commercialize/pages/compose-guide/index?scene=2588226fdbe541bcb442c997409bfe2b",
+        "name": "下单后得红包，无门槛叠加用",
+      },
       {
         "appId": "wxece3a9a4c82f58c9",
-        
-        "path": "commercialize/pages/compose-guide/index?scene=ef78f1eeae5a455b91f2038040328a41"
         //这里改成你的链接
+        "path": "taoke/pages/shopping-guide/index?scene=2wLDGYu",
+        "name": "饿了么外卖红包天天领",
       },
-      //美团1
-      {
-        "appId": "wxde8ac0a21135c07d",
-        //这里改成你的链接
-        "path": "/index/pages/h5/h5?lch=cps:waimai:5:65c5f4b9271221c79eae104d969a48a3:16571jutuikewx:33:85459&weburl=https%3A%2F%2Fdpurl.cn%2F0cb5HgHz&f_userId=1&f_token=1"
-      },
-      //美团闪购
-      {
-        "appId": "wxde8ac0a21135c07d",
-        "path": "/index/pages/h5/h5?lch=cps:waimai:5:65c5f4b9271221c79eae104d969a48a3:16571jutuikewx:4:85459&weburl=https%3A%2F%2Fdpurl.cn%2FVBPKCBkz&f_userId=1&f_token=1"
-        //这里改成你的链接
-      },
-      //饿了么 好友赏金
       {
         "appId": "wxece3a9a4c82f58c9",
         //这里改成你的链接
-        "path": "taoke/pages/shopping-guide/index?scene=B66GwYu"
-      },
-      //饿了么果蔬
-      {
-        "appId": "wxece3a9a4c82f58c9",
-        //这里改成你的链接
-        "path": "pages/sharePid/web/index?scene=https://s.click.ele.me/BShY8Zu"
-      },
-      //美团果蔬
-      {
-        "appId": "wxde8ac0a21135c07d",
-        //这里改成你的链接
-        "path": "/index/pages/h5/h5?f_userId=1&f_token=1&s_cps=1&weburl=https%3A%2F%2Fdpurl.cn%2FQi0jnGsz"
-      },
-      //美团周末
-      {
-        "appId": "wxde8ac0a21135c07d",
-        //这里改成你的链接
-        "path": "/index/pages/h5/h5?lch=mhqIykekFEV63u81zLSTaQViQ&noshare=1&f_userId=0&f_openId=0&f_token=0&weburl=https%3A%2F%2Fdpurl.cn%2FcOVJMlRz"
+        "path": "pages/sharePid/web/index?scene=https://s.click.ele.me/ymfDGYu",
+        "name": "生鲜日用最快30分钟内达，天天领红包",
       },      
       {
-        "appId": "wx1690e2d90c771536",
-        
-        "path": "pages/index/index"
+        //滴滴打车  
+        "appId": "wxaf35009675aa0b2a",
+        "path": "/pages/index/index?scene=mDg79Kq&source_id=16571jutuikewx",
+        "name": "用户可领取8折打车券，单笔交易最高抵扣10元，不同时间段优惠券金额可能会有调整，具体以实际领取为准",
         //这里改成你的链接
       },
       //美团吃喝玩乐
       {
-        "appId": "wxde8ac0a21135c07d",
+        //高德打车
+        "appId": "wxbc0cf9b963bd3550",
         //这里改成你的链接
-        "path": "/index/pages/h5/h5?lch=mhqIykekFEV63u81zLSTaQViQ&noshare=1&f_userId=0&f_openId=0&f_token=0&weburl=https%3A%2F%2Fdpurl.cn%2Fa3hCJlqz"
+        "path": "shareActivity/basic_activity/page/BasicActivityPop/BasicActivityPop?page_id=4k1Khw5X8wy&gd_from=outside_coupon_&pid=mm_1368340106_1991850209_111338350326&relationId=2785552080",
+        "name": "高德打车领取100元组合优惠券，新用户首单可立减 10 元",
       },
     ]
   },
@@ -216,7 +220,69 @@ Page({
   },
   onLoad() {
     let that = this
-  
+    this.setData({
+      miniData2:[
+        {
+          //美团
+          "appId": "wxde8ac0a21135c07d",
+          "path": "/index/pages/h5/h5?lch=cps:waimai:5:65c5f4b9271221c79eae104d969a48a3:16571jutuikewx:33:85459&weburl=https%3A%2F%2Fdpurl.cn%2F0QUNUlAz&f_userId=1&f_token=1",
+          "name": "美团外卖红包天天领",
+          //这里改成你的链接
+        },
+        {
+          "appId": "wxde8ac0a21135c07d",
+          //这里改成你的链接
+          "path": "/index/pages/h5/h5?lch=cps:waimai:5:65c5f4b9271221c79eae104d969a48a3:16571jutuikewx:4:85459&weburl=https%3A%2F%2Fdpurl.cn%2F8uSmgBfz&f_userId=1&f_token=1",
+          "name": "商超生鲜红包天天领",
+        },
+        {
+          "appId": "wxde8ac0a21135c07d",
+          "path": "/index/pages/h5/h5?lch=mhqIykekFEV63u81zLSTaQViQ&noshare=1&f_userId=0&f_openId=0&f_token=0&weburl=https%3A%2F%2Fdpurl.cn%2FVNQ7J86z",
+          "name": "美团吃喝玩乐到店消费",
+          //这里改成你的链接
+        },
+        {
+          "appId": "wxde8ac0a21135c07d",
+          //这里改成你的链接
+          "path": "/index/pages/h5/h5?lch=mhqIykekFEV63u81zLSTaQViQ&noshare=1&f_userId=0&f_openId=0&f_token=0&weburl=https%3A%2F%2Fdpurl.cn%2FvIHQu8wz",
+          "name": "美团周末特价：吃喝玩乐、低至1元",
+        },
+        {
+          //饿了么
+          "appId": "wxece3a9a4c82f58c9",
+          //这里改成你的链接
+          "path": "commercialize/pages/compose-guide/index?scene=2588226fdbe541bcb442c997409bfe2b",
+          "name": "下单后得红包，无门槛叠加用",
+        },
+        {
+          "appId": "wxece3a9a4c82f58c9",
+          //这里改成你的链接
+          "path": "taoke/pages/shopping-guide/index?scene=2wLDGYu",
+          "name": "饿了么外卖红包天天领",
+        },
+        {
+          "appId": "wxece3a9a4c82f58c9",
+          //这里改成你的链接
+          "path": "pages/sharePid/web/index?scene=https://s.click.ele.me/ymfDGYu",
+          "name": "生鲜日用最快30分钟内达，天天领红包",
+        },      
+        {
+          //滴滴打车  
+          "appId": "wxaf35009675aa0b2a",
+          "path": "/pages/index/index?scene=mDg79Kq&source_id=16571jutuikewx",
+          "name": "用户可领取8折打车券，单笔交易最高抵扣10元，不同时间段优惠券金额可能会有调整，具体以实际领取为准",
+          //这里改成你的链接
+        },
+        //美团吃喝玩乐
+        {
+          //高德打车
+          "appId": "wxbc0cf9b963bd3550",
+          //这里改成你的链接
+          "path": "shareActivity/basic_activity/page/BasicActivityPop/BasicActivityPop?page_id=4k1Khw5X8wy&gd_from=outside_coupon_&pid=mm_1368340106_1991850209_111338350326&relationId=2785552080",
+          "name": "高德打车领取100元组合优惠券，新用户首单可立减 10 元",
+        },
+      ]
+    })
     let i = 0
     setInterval(() => {
       i++
@@ -283,6 +349,12 @@ Page({
   },
   goact1() {
     this.setData({ act: 1 })
+  },
+  shengquan(e){
+    console.log(e.currentTarget.dataset.item)
+    wx.navigateToMiniProgram(
+      e.currentTarget.dataset.item
+    )
   },
   wm1() {
 

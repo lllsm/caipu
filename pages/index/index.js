@@ -356,36 +356,36 @@ Page({
       e.currentTarget.dataset.item
     )
   },
-  wm1() {
+  // wm1() {
 
-    wx.navigateToMiniProgram(
-      this.data.miniData[0]
-    )
-  },
-  wm2() {
-      wx.navigateToMiniProgram(
-        this.data.miniData[1]
-      )
+  //   wx.navigateToMiniProgram(
+  //     this.data.miniData[0]
+  //   )
+  // },
+  // wm2() {
+  //     wx.navigateToMiniProgram(
+  //       this.data.miniData[1]
+  //     )
 
-  },
-  wm3() {
-      wx.navigateToMiniProgram(
-        this.data.miniData[2]
-      )
+  // },
+  // wm3() {
+  //     wx.navigateToMiniProgram(
+  //       this.data.miniData[2]
+  //     )
 
-  },
-  wm4() {
-      wx.navigateToMiniProgram(
-        this.data.miniData[3]
-      )
+  // },
+  // wm4() {
+  //     wx.navigateToMiniProgram(
+  //       this.data.miniData[3]
+  //     )
 
-  },
-  wm5() {
-      wx.navigateToMiniProgram(
-        this.data.miniData[4]
-      )
+  // },
+  // wm5() {
+  //     wx.navigateToMiniProgram(
+  //       this.data.miniData[4]
+  //     )
 
-  },
+  // },
   goxr() {
     wx.navigateTo({
       url: '/pages/makee/makee'

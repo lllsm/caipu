@@ -31,7 +31,7 @@
     </view>
     <view class="cate-content-list" style="height: {{height_ipx}}rpx">
         <scroll-view class="cate-content" scrollIntoView="{{scroll_id}}" scrollY="true"
-            style="height: {{height_ipx}}rpx">
+            style="height: {{height_ipx}}rpx;margin-bottom:10rpx;">
             <block wx:for="{{list}}" wx:key="index">
 
                 <view class="type-bg">

@@ -11,14 +11,14 @@
       <view class="hb">
         <image class="im" src="../../imgs/sx.png" />
       </view>
-      <text class="t">买点生鲜（福利）</text>
+      <text class="t">其他神券</text>
     </view>
   </view>
   <view class="box-bb">
     <scroll-view class="innerbox-o" scroll-y="{{true}}">
       <block wx:if="{{act==0}}">
         <!--  -->
-        <view class="title">—— 点外卖之前先领券 ——</view>
+        <view class="title">—— 下单之前先领券 ——</view>
         <!-- <view class="hb-flex">
 
           <view class="hb" bindtap="wm2">
@@ -81,8 +81,14 @@
         <ad unit-id="adunit-bd56710a37a04282"></ad>
       </block>
       <block wx:if="{{act!=0}}">
-        <view class="title">—— 买点菜自己来动手 ——</view>
-        <view class="hb-flex">
+        <view class="title">—— 其他神券也疯狂 ——</view>
+        <view class="shengquan">
+          <view class="item-1" wx:for="{{canyinData}}" wx:for-item="item" wx:key="index" data-item="{{item}}" bindtap="shengquan">
+                   <image  style="animation-duration: 1200ms;" src="../../imgs/mt.png" class="hb-icon animated {{animated2}}  infinite" />
+          <view class="text-1">{{item.name}}</view>
+          </view>
+        </view>
+        <!-- <view class="hb-flex">
           <view class="hb" bindtap="wm5">
             <image style="animation-duration: 1200ms;" src="../../imgs/ele.png" class="hb-icon animated {{animated1}}  infinite" />
             <text class="hb-t">饿了么生鲜</text>
@@ -91,7 +97,7 @@
             <image  style="animation-duration: 1200ms;" src="../../imgs/mt.png" class="hb-icon animated {{animated2}}  infinite" />
             <text class="hb-t">美团吃喝玩乐</text> 
         </view>
-        </view>
+        </view> -->
         <button  class="randomBtn" open-type="contact" bindcontact="handleContact">联系客服</button >
         <view class="title">其他福利</view>
       </block>
@@ -100,3 +106,9 @@
   </view>
   <!-- <view class="bottom-bb"></view> -->
 </view>
+
+
+
+
+
+

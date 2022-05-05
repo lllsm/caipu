@@ -7,7 +7,7 @@ function t(t, e, i) {
     }) : t[e] = i, t;
 }
 
-var e, i, o = getApp(), s = require("../../1A7FD9A7867180BF7C19B1A0A9E83172.js");
+var e, i, o = getApp(), s = require("../../require.js");
 
 Page((i = {
     data: (e = {

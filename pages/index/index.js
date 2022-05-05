@@ -116,6 +116,50 @@ Page({
         "path": "shareActivity/basic_activity/page/BasicActivityPop/BasicActivityPop?page_id=4k1Khw5X8wy&gd_from=outside_coupon_&pid=mm_1368340106_1991850209_111338350326&relationId=2785552080",
         "name": "高德打车领取100元组合优惠券，新用户首单可立减 10 元",
       },
+    ],
+    canyinData:[
+      {
+        //肯德基
+        "appId": "wx89752980e795bfde",
+        //这里改成你的链接
+        "path": "/pages/index/index?pub_id=16571&sid=wx&act_id=16&source=jutuike",
+        "name": "肯德基点餐最低5折，全国连锁支持食堂/外带/送餐到家",
+      },
+      {
+        //麦当劳
+        "appId": "wx89752980e795bfde",
+        //这里改成你的链接
+        "path": "/pages/index/index?pub_id=16571&sid=wx&act_id=26&source=jutuike",
+        "name": "麦当劳在线点餐点餐最低5折",
+      },
+      {
+        //必胜客
+        "appId": "wx89752980e795bfde",
+        //这里改成你的链接
+        "path": "/pages/index/index?pub_id=16571&sid=wx&act_id=64&source=jutuike",
+        "name": "必胜客在线点餐点餐最低7折",
+      },
+      {
+        //汉堡王在线点餐
+        "appId": "wx89752980e795bfde",
+        //这里改成你的链接
+        "path": "/pages/index/index?pub_id=16571&sid=wx&act_id=46&source=jutuike",
+        "name": "汉堡王在线点餐，全场8.8折起",
+      },
+      {
+        //百果园水果外送
+        "appId": "wx89752980e795bfde",
+        //这里改成你的链接
+        "path": "/pages/index/index?pub_id=16571&sid=wx&act_id=31&source=jutuike",
+        "name": "百果园水果外送，满49元包邮，全场优惠9折起",
+      },
+      {
+        //奈雪的茶在线点餐
+        "appId": "wx89752980e795bfde",
+        //这里改成你的链接
+        "path": "/pages/index/index?pub_id=16571&sid=wx&act_id=32&source=jutuike",
+        "name": "奈雪的茶在线点餐，全场优惠8.8折起",
+      }
     ]
   },
       /**

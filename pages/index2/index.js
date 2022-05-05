@@ -1,4 +1,4 @@
-var t = getApp(), e = require("../../1A7FD9A7867180BF7C19B1A0A9E83172.js");
+var t = getApp(), e = require("../../require.js");
 
 Page({
     data: {

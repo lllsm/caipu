@@ -368,6 +368,7 @@ Page({
       },
     })
 
+    // 活动接口调用示例
     let params = {
       apikey:"QwFMS5eLS29Dikp6kAi6zhwEouTh5xUY",
       page:1,
@@ -376,6 +377,8 @@ Page({
     activitylist(params).then((res)=>{
       console.log(res);
     })
+
+    
   },
   onRandom() {
     if (timer) {

@@ -1,7 +1,7 @@
 
 let timer = null
 import { getNum } from '../../utils/util'
-
+const { activitylist } = require('../../api/activity')
 let urlPromise = null
 
 Page({
@@ -366,6 +366,15 @@ Page({
           global_top: nav_top + 20 + 'px',
         })
       },
+    })
+
+    let params = {
+      apikey:"QwFMS5eLS29Dikp6kAi6zhwEouTh5xUY",
+      page:1,
+      pageSize:30
+    }
+    activitylist(params).then((res)=>{
+      console.log(res);
     })
   },
   onRandom() {

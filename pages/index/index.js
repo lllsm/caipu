@@ -344,6 +344,9 @@ Page({
       })
     }
   },
+
+
+  
   activityData(){
     var that = this;
         // 活动接口调用示例

@@ -15,7 +15,7 @@
     </view>
   </view>
   <view class="box-bb">
-    <scroll-view class="innerbox-o" scroll-y="{{true}}">
+    <scroll-view class="innerbox-o" scroll-y="{{true}}"  bindscrolltolower="ReachBottom">
       <block wx:if="{{act==0}}">
         <!--  -->
         <view class="title">—— 下单之前先领券 ——</view>
@@ -50,42 +50,26 @@
           </view>
         </view> -->
         <view class="shengquan">
-          <view class="item-1" wx:for="{{miniData}}" wx:for-item="item" wx:key="index" data-item="{{item}}" bindtap="shengquan">
-                   <image  style="animation-duration: 1200ms;" src="../../imgs/mt.png" class="hb-icon animated {{animated2}}  infinite" />
-          <view class="text-1">{{item.name}}</view>
+          <view class="item-1" wx:for="{{activitylist}}" wx:key="index" data-item="{{item.act_id}}" bindtap="shengquan">
+            <image  src="{{item.img}}" class="activity_img" />
+            <view class="text-1">{{item.desc}}</view>
           </view>
         </view>
-        <button  class="randomBtn" open-type="contact" bindcontact="handleContact">联系客服</button >
 
-        <view class="title">—— 来个外卖冷笑话 ——</view>
-        <view class="xh">
-          {{xs[xsI]}}
-          <view class="more">
-            <image src="../../imgs/xiao.png" class="xiao" />
-            <text class="more-t" bindtap="morexh">再来一个</text>
-          </view>
-        </view>
-        
-        <view class="title">—— 今天吃点啥呢 ——</view>
-        <view class="cs">
-          <view class="foodName">{{current || '今天吃点啥呢'}}</view>
-          <view data-event-opts="{{[['tap',[['onRandom']]]]}}" class="randomBtn" bindtap="onRandom">
-            {{''+(processing?'停止':isFirst?'随机选一个':'不行, 换一个')+''}}
-          </view>
-        </view>
-        <view class="ascf">
-          <image src="/cp/ascf.jpg" />
-        </view>
-        <view class="scjp-v"  bindtap="goxr">生成你自己的举牌小人</view>
-        <view style="height:60rpx;"></view>
-        <ad unit-id="adunit-bd56710a37a04282"></ad>
+
+      <!--
+        liuliangzhu
+       -->
+        <!-- <ad unit-id="adunit-bd56710a37a04282"></ad> -->
+
+
       </block>
       <block wx:if="{{act!=0}}">
         <view class="title">—— 其他神券也疯狂 ——</view>
         <view class="shengquan">
           <view class="item-1" wx:for="{{canyinData}}" wx:for-item="item" wx:key="index" data-item="{{item}}" bindtap="shengquan">
-                   <image  style="animation-duration: 1200ms;" src="../../imgs/mt.png" class="hb-icon animated {{animated2}}  infinite" />
-          <view class="text-1">{{item.name}}</view>
+            <image style="animation-duration: 1200ms;" src="../../imgs/mt.png" class="hb-icon animated {{animated2}}  infinite" />
+            <view class="text-1">{{item.name}}</view>
           </view>
         </view>
         <!-- <view class="hb-flex">
@@ -98,17 +82,35 @@
             <text class="hb-t">美团吃喝玩乐</text> 
         </view>
         </view> -->
-        <button  class="randomBtn" open-type="contact" bindcontact="handleContact">联系客服</button >
+        <button class="randomBtn" open-type="contact" bindcontact="handleContact">联系客服</button>
         <view class="title">其他福利</view>
+
+
+        
+        <view class="title">—— 来个外卖冷笑话 ——</view>
+        <view class="xh">
+          {{xs[xsI]}}
+          <view class="more">
+            <image src="../../imgs/xiao.png" class="xiao" />
+            <text class="more-t" bindtap="morexh">再来一个</text>
+          </view>
+        </view>
+
+        <view class="title">—— 今天吃点啥呢 ——</view>
+        <view class="cs">
+          <view class="foodName">{{current || '今天吃点啥呢'}}</view>
+          <view data-event-opts="{{[['tap',[['onRandom']]]]}}" class="randomBtn" bindtap="onRandom">
+            {{''+(processing?'停止':isFirst?'随机选一个':'不行, 换一个')+''}}
+          </view>
+        </view>
+        <view class="ascf">
+          <image src="/cp/ascf.jpg" />
+        </view>
+        <view class="scjp-v" bindtap="goxr">生成你自己的举牌小人</view>
+        <view style="height:60rpx;"></view>
       </block>
       <!--  -->
     </scroll-view>
   </view>
   <!-- <view class="bottom-bb"></view> -->
 </view>
-
-
-
-
-
-

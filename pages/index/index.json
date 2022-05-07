@@ -2,5 +2,6 @@
   "usingComponents": {},
   "navigationStyle": "custom",
   "backgroundColor":"#fec456",
-  "disableScroll":true
+  "disableScroll":true,
+  "onReachBottomDistance":300
 }

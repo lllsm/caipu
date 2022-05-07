@@ -1,38 +1,42 @@
 const { baseUrl } = require('./env').prod
+ 
+// 封装ajax
 module.exports = {
-  request : function(url, method = 'GET', data = {}){
-    let fullUrl = `${baseUrl}${url}`
-    let token = wx.getStorageSync('token') ? wx.getStorageSync('token')  : ''
-    return new Promise((resolve,reject)=>{
+  request: function(url, method = 'POST', data = {}, isLoading = true) {
+    // 操作url
+    var url = `${baseUrl}/${url}`
+    // 操作data
+    var data = data
+    console.log(url,data)
+    if (isLoading) wx.showLoading({ title: '加载中...' })
+    return new Promise((resolve, reject)=>{
       wx.request({
-        url: fullUrl,
-        method,
-        data,
+        url: url,
+        method: method,
+        data: data,
         header: {
-          'content-type': 'application/json', // 默认值
-          'x-api-key': token,
+          'Content-type': 'application/x-www-form-urlencoded'
         },
-        success(res){
-          if (res.data.code == 200) {
+        success(res) {
+          if (res.statusCode === 200 && res.data.code === 1) {
             resolve(res.data)
-          }else{
-            // wx.showToast({
-            //   title: res.data.msg,
-            //   icon:'none'
-            // })
+            wx.hideLoading()
+          } else {
             wx.showToast({
-              title: '获取成功',
-              icon:'none'
+              title: '接口有问题',
+              icon: 'none'
             })
-            reject(res.data.message)
+            reject(res)
+            wx.hideLoading()
           }
         },
-        fail(){
+        fail() {
           wx.showToast({
-            title: '接口请求错误',
-            icon:'none'
+            title: '接口有问题',
+            icon: 'none'
           })
-          reject('接口请求错误')
+          reject(res)
+          wx.hideLoading()
         }
       })
     })

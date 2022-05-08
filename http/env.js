@@ -5,6 +5,6 @@ module.exports = {
   },
   // 正式环境
   prod:{
-    baseUrl:'http://api.jutuike.com/union/'
+    baseUrl:'https://api.jutuike.com/union/'
   }
 }   

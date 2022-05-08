@@ -1,6 +1,6 @@
+page {
+  font-size: 32rpx;
+  color: #333;
+}
 
-page{
-    font-size: 32rpx;
-    color:#333;
-  }
-  
+

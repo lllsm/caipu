@@ -18,6 +18,7 @@ Page({
     global_top: '28px',
     current: "",
     isFirst: true,
+    isshow:false,
     processing: false,
     act: 0,
     list: [
@@ -265,6 +266,7 @@ Page({
     })
   },
   onLoad() {
+    wx.setStorageSync('key', '5321')
     let that = this
     let i = 0
     setInterval(() => {
@@ -370,6 +372,39 @@ Page({
   },
   goact1() {
     this.setData({ act: 1 })
+  },
+  dingdan(){
+    var that = this;
+    this.setData({isshow:!that.data.isshow})
+  },
+  tiaozhuan(e){
+    var that = this;
+    var pass = wx.getStorageSync('key');
+    console.log(pass)
+    console.log(e.detail)
+    if(pass == e.detail ){
+      wx.showToast({
+        title: "你就是大佬！",
+        icon: "none"
+      })
+      wx.navigateTo({
+        url: '/pages/order/order',
+      })
+    }else{
+      wx.showToast({
+        title: "密码错误，傻了吧！",
+        icon: "none"
+      })
+    }
+
+
+  },
+  showPopup() {
+    this.setData({ isshow: true });
+  },
+
+  onClose() {
+    this.setData({ isshow: false });
   },
   shengquan(e){
     var that =this;

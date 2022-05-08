@@ -18,6 +18,7 @@
     <scroll-view class="innerbox-o" scroll-y="{{true}}"  bindscrolltolower="ReachBottom">
       <block wx:if="{{act==0}}">
         <!--  -->
+        
         <view class="title">—— 下单之前先领券 ——</view>
         <!-- <view class="hb-flex">
 
@@ -108,9 +109,32 @@
         </view>
         <view class="scjp-v" bindtap="goxr">生成你自己的举牌小人</view>
         <view style="height:60rpx;"></view>
+
+        <button class="randomBtn"  bindlongtap="dingdan">
+        梦开始的地方
+        </button>
       </block>
       <!--  -->
     </scroll-view>
   </view>
   <!-- <view class="bottom-bb"></view> -->
 </view>
+<van-popup
+  show="{{ isshow }}"
+  round
+  closeable
+  position="bottom"
+  custom-style="height: 20%"
+  bind:close="onClose"
+>
+
+
+<van-field
+    model:value="{{ value }}"
+    placeholder="请输入管理员密码"
+    border="{{ false }}"
+    bind:confirm = "tiaozhuan"
+  />
+
+</van-popup>
+

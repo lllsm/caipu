@@ -1,0 +1,18 @@
+{
+  "name": "caipu-master",
+  "version": "1.0.0",
+  "description": "npm-install-package",
+  "main": "9CE874B1867180BFFA8E1CB67DD83172.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@vant/weapp": "^1.10.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "[git-url-of-your-project]"
+  }
+}

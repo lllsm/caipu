@@ -18,19 +18,19 @@
     "checkSiteMap": true,
     "uploadWithSourceMap": true,
     "compileHotReLoad": false,
+    "lazyloadPlaceholderEnable": false,
     "useMultiFrameRuntime": true,
+    "useApiHook": true,
+    "useApiHostProcess": true,
     "babelSetting": {
       "ignore": [],
       "disablePlugins": [],
       "outputPath": ""
     },
-    "useIsolateContext": true,
-    "useCompilerModule": true,
-    "userConfirmedUseCompilerModuleSwitch": false,
+    "useIsolateContext": false,
+    "userConfirmedBundleSwitch": false,
     "packNpmManually": false,
     "packNpmRelationList": [],
-    "lazyloadPlaceholderEnable": false,
-    "userConfirmedBundleSwitch": false,
     "minifyWXSS": true,
     "disableUseStrict": false,
     "minifyWXML": true,
@@ -46,6 +46,13 @@
     "tabIndent": "insertSpaces",
     "tabSize": 2
   },
+  "packOptions": {
+    "ignore": [],
+    "include": []
+  },
+  "appid": "wx5d9f496252c25e4e",
+  "projectname": "caipu-master1",
+  "libVersion": "2.24.1",
   "condition": {
     "search": {
       "list": []
@@ -65,10 +72,5 @@
     "miniprogram": {
       "list": []
     }
-  },
-  "packOptions": {
-    "ignore": [],
-    "include": []
-  },
-  "appid": "wx5d9f496252c25e4e"
+  }
 }

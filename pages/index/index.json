@@ -1,5 +1,7 @@
 {
-  "usingComponents": {},
+  "usingComponents": {
+    "van-popup": "@vant/weapp/popup/index"
+  },
   "navigationStyle": "custom",
   "backgroundColor":"#fec456",
   "disableScroll":true,

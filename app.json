@@ -10,7 +10,8 @@
     "pages/cate/ranklist/ranklist",
     "pages/recipe/recipe",
     "pages/recipe/comment/comment",
-    "pages/food/food"
+    "pages/food/food",
+    "pages/order/order"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -51,5 +52,11 @@
       }
     ]
   },
-  "sitemapLocation": "sitemap.json"
+  "sitemapLocation": "sitemap.json",
+  "usingComponents": {
+     "van-button":"@vant/weapp/button/index",
+     "van-search": "@vant/weapp/search/index",
+     "van-popup": "@vant/weapp/popup/index",
+     "van-field": "@vant/weapp/field/index"
+  }
 }

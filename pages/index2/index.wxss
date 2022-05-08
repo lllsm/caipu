@@ -1,3 +1,5 @@
+ 
+
 .search {
     width: 650rpx;
     height: 80rpx;
@@ -7,10 +9,13 @@
 }
 
 .search-bottom {
-    width: 650rpx;
+    width: 600rpx;
     height: 80rpx;
     border-radius: 45rpx;
     background: #EEEEEE;
+    padding-left: 40px;
+
+ 
 }
 
 .search-img {
@@ -32,13 +37,24 @@
 }
 
 .search-input {
-    width: 590rpx;
+    width: 540rpx;
     height: 80rpx;
     border-radius: 45rpx;
     background-color: #EEEEEE;
     text-align: left;
-    padding: 0 30rpx;
+     
+
+    
+     
 }
+/* .search-input {
+    width: 517rpx;
+    height: 80rpx;
+    padding-right: 45rpx;
+    background-color: #EEEEEE;
+    float: right;
+} */
+
 
 .search-pla {
     font-size: 26rpx;

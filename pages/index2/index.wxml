@@ -1,6 +1,13 @@
 <view class="weap">
+    <view class="base-bbt" style="padding-top:{{global_top}}">
+    </view>
+
+
     <view class="search">
         <view class="search-bottom">
+            <image class="search-img-select" mode="aspectFill" src="../../images/common/search.png" wx:if="search_type">
+        </image>
+            <image class="search-img" mode="aspectFill" src="../../images/common/search.png" wx:else></image>
             <input bindblur="search_blur" bindconfirm="search_data" bindfocus="search" bindinput="search_monitor" class="search-input" confirmType="search" placeholder="搜索菜谱、食材" placeholderClass="{{placeholder_type}}" type="text"></input>
         </view>
     </view>
@@ -38,7 +45,7 @@
             <view class="head-title">菜谱排行榜</view>
             <navigator navigateBack hoverClass="none" url="../cate/ranklist/ranklist">
                 <view class="rank-more">更多
-                      <image class="more-img" mode="aspectFill" src="../../images/common/more.png"></image>
+                    <image class="more-img" mode="aspectFill" src="../../images/common/more.png"></image>
                 </view>
             </navigator>
         </view>
@@ -116,7 +123,7 @@
     <view class="index-list">
         <view class="list-title">每日推荐</view>
         <navigator navigateBack class="recipe-list" hoverClass="none" url="../recipe/recipe?id={{item.RecipeId}}&type={{item.Type}}" wx:for="{{recipe_list}}" wx:key="index">
-            
+
             <view class="recipe-content">
                 <view class="recipe-title">{{item.BaiduTitle}}</view>
                 <block wx:if="{{item.Type>0}}">

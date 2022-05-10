@@ -84,6 +84,7 @@
         </view>
         </view> -->
         <button class="randomBtn" open-type="contact" bindcontact="handleContact">联系客服</button>
+        <button class="randomBtn" open-type="feedback">意见反馈</button>
         <view class="title">其他福利</view>
 
 

@@ -83,8 +83,7 @@
             <text class="hb-t">美团吃喝玩乐</text> 
         </view>
         </view> -->
-        <button class="randomBtn" open-type="contact" bindcontact="handleContact">联系客服</button>
-        <button class="randomBtn" open-type="feedback">意见反馈</button>
+
         <view class="title">其他福利</view>
 
 
@@ -110,32 +109,11 @@
         </view>
         <view class="scjp-v" bindtap="goxr">生成你自己的举牌小人</view>
         <view style="height:60rpx;"></view>
-
-        <button class="randomBtn"  bindlongtap="dingdan">
-        梦开始的地方
-        </button>
       </block>
       <!--  -->
     </scroll-view>
   </view>
   <!-- <view class="bottom-bb"></view> -->
 </view>
-<van-popup
-  show="{{ isshow }}"
-  round
-  closeable
-  position="bottom"
-  custom-style="height: 20%"
-  bind:close="onClose"
->
 
-
-<van-field
-    model:value="{{ value }}"
-    placeholder="请输入管理员密码"
-    border="{{ false }}"
-    bind:confirm = "tiaozhuan"
-  />
-
-</van-popup>
 

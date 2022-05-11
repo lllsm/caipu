@@ -5,7 +5,6 @@
     "pages/all_cate/all_cate",
     "pages/all_food/all_food",
     "pages/user/user",
-    "pages/user/userinfo/userinfo",
     "pages/cate/cate",
     "pages/cate/ranklist/ranklist",
     "pages/recipe/recipe",
@@ -49,6 +48,12 @@
         "text": "食材",
         "iconPath": "images/common/food.png",
         "selectedIconPath": "images/common/food_select.png"
+      },
+      {
+        "pagePath": "pages/user/user",
+        "text": "我的",
+        "iconPath": "images/common/user.png",
+        "selectedIconPath": "images/common/user_select.png"
       }
     ]
   },
@@ -58,6 +63,8 @@
      "van-search": "@vant/weapp/search/index",
      "van-popup": "@vant/weapp/popup/index",
      "van-field": "@vant/weapp/field/index",
-     "van-datetime-picker": "@vant/weapp/datetime-picker/index"
+     "van-datetime-picker": "@vant/weapp/datetime-picker/index",
+     "van-cell": "@vant/weapp/cell/index",
+     "van-cell-group": "@vant/weapp/cell-group/index"
   }
 }

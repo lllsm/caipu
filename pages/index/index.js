@@ -367,6 +367,14 @@ Page({
           // console.error(error);
         })
   },
+  hulian(){
+    wx.navigateToMiniProgram(
+      {
+        appId: "wx87df02655e5ac0a2",
+        path: "/pages/index/index",
+      }
+    )
+  },
   goact0() {
     this.setData({ act: 0 })
   },

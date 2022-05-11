@@ -1,1 +1,7 @@
 /* pages/order/order.wxss */
+.dingdan{
+  background-color: #eeeeee;
+  padding: 10rpx;
+  margin: 30rpx;
+  border-radius: 20rpx;
+}

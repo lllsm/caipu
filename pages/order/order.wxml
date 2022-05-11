@@ -1,2 +1,56 @@
 <!--pages/order/order.wxml-->
-<text>pages/order/order.wxml</text>
+<picker mode="date" value="{{startdate}}" bindchange="bindDateChangestart">
+  <view class="picker">
+    当前选择: {{startdate||"请选中开始时间"}}
+  </view>
+</picker>
+<picker mode="date" value="{{enddate}}" bindchange="bindDateChangeend">
+  <view class="picker">
+    当前选择: {{enddate||"请选中结束时间"}}
+  </view>
+</picker>
+<view><input placeholder="请输入订单号" bindconfirm="inp" bindblur="inp" /></view>
+<button bindtap="chaxun">查询</button>
+<view>
+  <view wx:for="{{orderslist}}" class="dingdan">
+    <view>
+      <text>活动名称: </text>
+      <text>{{item.act_name}}</text>
+    </view>
+    <view>
+      <text>佣金: </text>
+      <text>{{item.jtk_share_fee}}</text>
+    </view>
+    <view>
+      <text>订单号: </text>
+      <text>{{item.order_sn}}</text>
+    </view>
+    <view>
+      <text>商品名称: </text>
+      <text>{{item.order_title}}</text>
+    </view>
+  
+
+
+    <view>
+      <text>下单时间: </text>
+      <text>{{item.create_time}}</text>
+    </view>
+    <view>
+      <text>付款时间: </text>
+      <text>{{item.pay_time}}</text>
+    </view>
+    <view>
+      <text>商品单价: </text>
+      <text>{{item.order_price}}</text>
+    </view>
+    <view>
+      <text>实际付款金额: </text>
+      <text>{{item.pay_price}}</text>
+    </view>
+    <view>
+      <text>订单统一状态: </text>
+      <text>{{item.status}}</text>
+    </view>
+  </view>
+</view>

@@ -1,30 +1,22 @@
-<view class="grzx">我的</view>
-<view class="margin-bottom-10">
-  <button class="randomBtn clear-button" open-type="contact" bindcontact="handleContact">联系客服</button>
-  <button class="randomBtn clear-button" open-type="feedback">意见反馈</button>
+<view class="grzx flex-center">
+<!-- <view class="grzx1 flex-center">我的</view> -->
 </view>
-<view class="margin-bottom-10">
-  <van-cell title="梦开始的地方" is-link value="梦开始的地方" bindlongtap="dingdan"/>
+<view class="menu">
+  <view class="margin-bottom-10">
+    <button class="randomBtn clear-button" open-type="contact" bindcontact="handleContact">联系客服</button>
+    <button class="randomBtn clear-button" open-type="feedback">意见反馈</button>
+  </view>
+  <view class="margin-bottom-10">
+    <van-cell title="梦开始的地方" is-link value="梦开始的地方" bindlongtap="dingdan" />
+  </view>
+  <view class="margin-bottom-10">
+    <van-cell title="鸣易" is-link value="友情互联" bindtap="hulian" />
+  </view>
+
+  <van-popup show="{{ isshow }}" round closeable position="bottom" custom-style="height: 20%" bind:close="onClose">
+
+
+    <van-field model:value="{{ value }}" placeholder="请输入管理员密码" border="{{ false }}" bind:confirm="tiaozhuan" />
+
+  </van-popup>
 </view>
-<view class="margin-bottom-10">
-  <van-cell title="鸣易" is-link value="友情互联" bindtap="hulian"/>
-</view>
-
-<van-popup
-  show="{{ isshow }}"
-  round
-  closeable
-  position="bottom"
-  custom-style="height: 20%"
-  bind:close="onClose"
->
-
-
-<van-field
-    model:value="{{ value }}"
-    placeholder="请输入管理员密码"
-    border="{{ false }}"
-    bind:confirm = "tiaozhuan"
-  />
-
-</van-popup>

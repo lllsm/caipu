@@ -18,7 +18,8 @@
     <scroll-view class="innerbox-o" scroll-y="{{true}}"  bindscrolltolower="ReachBottom">
       <block wx:if="{{act==0}}">
         <!--  -->
-        
+        <view class="text-5 padding-28 txt-red">温馨提示：本小程序所有菜谱数据由京细菜谱提供！需要了解更多可下载京细菜谱APP。如有侵权，请联系客服进行删除，还望谅解，谢谢！</view>
+        <view class="title">以下内容其目的为用户提供便利，提升用户体验。</view>
         <view class="title">—— 下单之前先领券 ——</view>
         <!-- <view class="hb-flex">
 
@@ -66,13 +67,13 @@
 
       </block>
       <block wx:if="{{act!=0}}">
-        <view class="title">—— 其他神券也疯狂 ——</view>
-        <view class="shengquan">
+        <!-- <view class="title">—— 其他神券也疯狂 ——</view> -->
+        <!-- <view class="shengquan">
           <view class="item-1" wx:for="{{canyinData}}" wx:for-item="item" wx:key="index" data-item="{{item}}" bindtap="shengquan">
             <image style="animation-duration: 1200ms;" src="../../imgs/mt.png" class="hb-icon animated {{animated2}}  infinite" />
             <view class="text-1">{{item.name}}</view>
           </view>
-        </view>
+        </view> -->
         <!-- <view class="hb-flex">
           <view class="hb" bindtap="wm5">
             <image style="animation-duration: 1200ms;" src="../../imgs/ele.png" class="hb-icon animated {{animated1}}  infinite" />
@@ -84,7 +85,7 @@
         </view>
         </view> -->
 
-        <view class="title">其他福利</view>
+        <!-- <view class="title">其他福利</view> -->
 
 
         

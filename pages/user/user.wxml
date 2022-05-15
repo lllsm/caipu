@@ -1,6 +1,9 @@
-<view class="grzx flex-center">
-<!-- <view class="grzx1 flex-center">我的</view> -->
+<view class="hb">
+  <image class="im" mode="heightFix" src="../../imgs/bj.jpg" />
 </view>
+<!-- <view class="grzx flex-center">
+  <view class="grzx1 flex-center">我的</view>
+</view> -->
 <view class="menu">
   <view class="margin-bottom-10">
     <button class="randomBtn clear-button" open-type="contact" bindcontact="handleContact">联系客服</button>

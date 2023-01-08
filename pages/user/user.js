@@ -10,7 +10,15 @@ Page({
     hulian(){
       wx.navigateToMiniProgram(
         {
-          appId: "wx87df02655e5ac0a2",
+          appId: "wxd2523f83d27e3690",
+          path: "/pages/home/home",
+        }
+      )
+    },
+    hulian2(){
+      wx.navigateToMiniProgram(
+        {
+          appId: "wxd30ec01beb10c29a",
           path: "/pages/index/index",
         }
       )

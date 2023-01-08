@@ -13,7 +13,10 @@
     <van-cell title="梦开始的地方" is-link value="梦开始的地方" bindlongtap="dingdan" />
   </view>
   <view class="margin-bottom-10">
-    <van-cell title="鸣易" is-link value="友情互联" bindtap="hulian" />
+    <van-cell title="三年四班" is-link value="班级管理工具" bindtap="hulian" />
+  </view>
+  <view class="margin-bottom-10">
+    <van-cell title="追鸭追壁纸" is-link value="免费壁纸下载" bindtap="hulian2" />
   </view>
 
   <van-popup show="{{ isshow }}" round closeable position="bottom" custom-style="height: 20%" bind:close="onClose">

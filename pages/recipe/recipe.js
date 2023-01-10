@@ -277,7 +277,47 @@ Page((i = {
             urls: this.conf.step_img
         });
     },
-    onShareAppMessage: function() {},
+    onShareAppMessage(res) {
+      var messages = [{
+        title: '美团饿了么大额红包，每日可领！',
+        path: '/pages/index/index'
+      }, {
+        title: '吃了这么多年外卖，你知道这个秘密吗？',
+        path: '/pages/index/index'
+      }, {
+        title: '这样点外卖，一年省下好多钱',
+        path: '/pages/index/index'
+      }, {
+        title: '点外卖前先领券，吃霸王餐',
+        path: '/pages/index/index'
+      }, {
+        title: '美团饿了么内部优惠券，手慢无',
+        path: '/pages/index/index'
+      }, {
+        title: '点外卖不用优惠券，你就out了',
+        path: '/pages/index/index'
+      }, {
+        title: '外卖不为人知的秘密，点这解密',
+        path: '/pages/index/index'
+      }, {
+        title: '震惊！小伙点外卖竟然花了1分钱',
+        path: '/pages/index/index'
+      }, {
+        title: '从这点外卖，你也可以吃霸王餐',
+        path: '/pages/index/index'
+      }];
+      let data = messages[Math.floor(Math.random() * messages.length)]
+      data.imageUrl = "/cp/mf.png"
+      return data;
+    },
+  
+    onShareTimeline: function (res) {
+      return {
+        title: '今日菜单：'+this.data.title,
+        path: '/pages/recipe/recipe?id='+this.data.recipe_id+'&type='+this.data.type,
+        imageUrl:this.data.cover
+      }
+    },
     attentionBut: function(t) {
         var e = this;
         this.conf.isattention ? s.post("Content/Recipe/unfollow", {

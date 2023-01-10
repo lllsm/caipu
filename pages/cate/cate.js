@@ -39,6 +39,8 @@ Page({
         this.conf.cate_id = e, this.conf.cate_name = void 0 != o ? o : s, this.conf.keywords = void 0 == o ? "" : o, 
         this.conf.sort_id = i, this.getList();
     },
+
+  
     onReachBottom: function() {
         this.getList();
     },

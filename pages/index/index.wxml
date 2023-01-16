@@ -19,7 +19,7 @@
       <block wx:if="{{act==0}}">
         <!--  -->
         <view class="text-5 padding-28 txt-red">温馨提示：本小程序所有菜谱数据由京细菜谱提供！需要了解更多可下载京细菜谱APP。如有侵权，请联系客服进行删除，还望谅解，谢谢！</view>
-        <view class="title">以下内容其目的为用户提供便利，提升用户体验。</view>
+        <view class="title">先领券然后可到对应平台或者APP使用所领的券！</view>
         <view class="title">—— 下单之前先领券 ——</view>
         <!-- <view class="hb-flex">
 
